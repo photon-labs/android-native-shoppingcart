@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+ -->
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent">
+		<LinearLayout android:gravity="center_horizontal"
+			android:orientation="vertical" android:layout_width="match_parent"
+			android:layout_height="match_parent" android:weightSum="1"
+			android:background="@drawable/screen_bg">
+			<include android:layout_height="wrap_content" layout="@layout/header"
+				android:id="@+id/header_include" android:layout_width="fill_parent"></include>
+			<GridView android:id="@+id/grid_menu_options"
+				android:layout_width="fill_parent" android:columnWidth="90dp" android:verticalSpacing="10dp" android:horizontalSpacing="10dp"
+				android:stretchMode="columnWidth" android:gravity="center" android:numColumns="2" android:layout_gravity="center" android:layout_height="wrap_content"></GridView>
+
+
+		</LinearLayout>
+		<com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_gravity="bottom" android:gravity="bottom"
+			android:layout_marginTop="30dip" android:weightSum="1" />
+
+	</FrameLayout>
+<!-- </ScrollView> -->

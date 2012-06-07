@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="fill_vertical" android:layout_height="wrap_content" android:padding="5dip" android:background="@drawable/category_listview_item">
+
+	<ImageView android:layout_alignParentLeft="true" android:layout_centerInParent="true"
+		android:scaleType="center" android:id="@+id/img_category_image" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/noimage_category">
+	</ImageView>
+
+	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_height="wrap_content" android:text="TextView"
+		android:layout_toRightOf="@+id/img_category_image"
+		android:layout_marginLeft="2dip" style="@style/TextViewStyle" android:id="@+id/category_title" android:ellipsize="end" android:layout_centerVertical="true" android:width="150dip" android:layout_width="160dip">
+	</TextView>
+	<TextView android:text="text" android:id="@+id/category_list_counter" style="@style/CategoryListCounter" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/arrow_icon" android:layout_centerInParent="true" android:layout_marginRight="12dp" android:layout_width="wrap_content"></TextView>
+	<ImageView android:id="@+id/arrow_icon" android:src="@drawable/arrow_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@+id/category_title" android:layout_alignParentRight="true" android:layout_marginRight="5dip" android:layout_centerInParent="true"></ImageView>
+
+
+
+</RelativeLayout>

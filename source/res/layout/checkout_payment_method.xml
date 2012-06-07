@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+ -->
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 	android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent">
+		<LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+			android:weightSum="1" android:background="@drawable/checkout_payment_method_bg" android:padding="8dip" android:layout_height="wrap_content" android:layout_gravity="top|fill_horizontal">
+			<TextView android:layout_width="wrap_content" android:gravity="center" android:textColor="#FFFFFF" android:text="Select payment method from following options" android:layout_height="wrap_content" android:layout_marginBottom="5dip" android:id="@+id/TextView02" android:layout_marginTop="5dip" android:layout_gravity="fill_horizontal"></TextView>
+			<RadioGroup android:layout_marginLeft="25dip"
+				android:layout_marginTop="25dip" android:layout_marginBottom="10dip" android:id="@+id/radio_grp_payment_method" android:layout_height="wrap_content" android:layout_width="264dp" android:layout_gravity="fill_horizontal">
+				<RadioButton android:layout_height="wrap_content"
+					android:checked="true" android:id="@+id/radio_cheque" android:text="Cheque or Money Order"
+					android:layout_width="match_parent" android:paddingLeft="60dip"></RadioButton>
+				<RadioButton android:layout_height="wrap_content"
+					android:text="Cash on Delivery" android:id="@+id/radio_cash_on_delivery"
+					android:layout_width="match_parent" android:paddingLeft="60dip"></RadioButton>
+			</RadioGroup>
+			<RelativeLayout android:id="@+id/relativeLayout3"
+				android:layout_height="wrap_content" android:layout_width="match_parent"
+				android:paddingLeft="3dip" android:layout_margin="5dip" android:layout_gravity="fill_horizontal">
+				<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+					android:layout_width="wrap_content"
+					android:layout_centerInParent="true"
+					android:layout_alignParentLeft="true" android:id="@+id/lbl_sub_total" android:text="Sub Total:"></TextView>
+				<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+					android:text="$" android:layout_width="wrap_content"
+					android:textColor="#FFFF00" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_toRightOf="@+id/lbl_sub_total" android:id="@+id/lbl_currency_subtotal" android:layout_marginLeft="3dip"></TextView>
+				<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+					android:layout_width="wrap_content" android:textColor="#FFFF00"
+					android:layout_alignParentTop="true"
+					android:layout_marginLeft="2dip" android:layout_centerInParent="true" android:id="@+id/sub_total" android:layout_toRightOf="@+id/lbl_currency_subtotal"></TextView>
+			</RelativeLayout>
+			<RelativeLayout android:id="@+id/relativeLayout3"
+				android:layout_height="wrap_content" android:layout_width="match_parent"
+				android:paddingLeft="3dip" android:layout_margin="5dip" android:layout_gravity="fill_horizontal">
+				<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+					android:layout_width="wrap_content"
+					android:layout_centerInParent="true"
+					android:layout_alignParentLeft="true" android:id="@+id/lbl_order_total" android:text="Order Total:"></TextView>
+				<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+					android:text="$" android:layout_width="wrap_content"
+					android:textColor="#FFFF00" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_toRightOf="@+id/lbl_order_total" android:id="@+id/lbl_currency_ordertotal" android:layout_marginLeft="3dip"></TextView>
+				<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+					android:layout_width="wrap_content" android:textColor="#FFFF00"
+					android:layout_alignParentTop="true"
+					android:layout_marginLeft="2dip" android:layout_centerInParent="true" android:id="@+id/order_total" android:layout_toRightOf="@+id/lbl_currency_ordertotal"></TextView>
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/payment_method_title" android:layout_marginTop="15dip" android:text="Cheque should be drawn in favor of PHRESCO" android:textColor="#FFFF00" android:layout_marginBottom="25dip" android:layout_gravity="fill_horizontal"></TextView>
+		</LinearLayout>
+	</FrameLayout>
+<!-- </ScrollView> -->

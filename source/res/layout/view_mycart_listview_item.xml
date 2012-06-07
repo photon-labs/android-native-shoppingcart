@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="fill_vertical"
+	android:layout_height="wrap_content" style="@drawable/product_listview_item" android:padding="3dip" android:background="@drawable/product_listview_item_bg">
+	<LinearLayout android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1" android:orientation="vertical"
+		android:layout_alignTop="@+id/product_title" android:layout_toRightOf="@+id/img_product_image"
+		android:layout_width="match_parent"
+		android:layout_centerHorizontal="true">
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/relativeLayout1" android:background="@drawable/view_cart_item_top" android:paddingLeft="3dip">
+			<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/lbl_product" android:layout_centerInParent="true"
+				android:text="Product:" android:layout_alignParentTop="true" android:layout_marginLeft="5dip"></TextView>
+			<TextView android:layout_height="wrap_content"
+				android:ellipsize="end" style="@style/TextViewStyle" android:id="@+id/product_title" android:layout_toRightOf="@+id/lbl_product"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_margin="2dip" android:layout_centerInParent="true" android:layout_width="fill_parent"></TextView>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:id="@+id/relativeLayout2" android:layout_width="match_parent"
+			android:background="@drawable/view_cart_item_middle" android:paddingLeft="3dip">
+			<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/lbl_quantity" android:layout_centerInParent="true"
+				android:text="Quantity:" android:layout_marginLeft="5dip"></TextView>
+			<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+				android:layout_width="wrap_content" android:layout_toRightOf="@+id/lbl_quantity"
+				android:id="@+id/product_quantity" android:layout_centerInParent="true"
+				android:layout_marginLeft="5dip"></TextView>
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/relativeLayout3"
+			android:layout_height="wrap_content" android:layout_width="match_parent" android:background="@drawable/view_cart_item_bottom" android:paddingLeft="3dip">
+			<TextView android:id="@+id/lbl_product_quantity"
+				android:layout_height="wrap_content" style="@style/TextViewStyle"
+				android:text="Price:" android:layout_width="wrap_content" android:layout_centerInParent="true" android:layout_alignParentLeft="true" android:layout_marginLeft="5dip"></TextView>
+			<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+				android:text="$" android:layout_width="wrap_content"
+				android:textColor="#FFFF00" android:layout_alignParentTop="true" android:layout_toRightOf="@+id/lbl_product_quantity" android:layout_centerInParent="true" android:id="@+id/lbl_currency"></TextView>
+			<TextView android:layout_height="wrap_content" style="@style/TextViewStyle"
+				android:layout_width="wrap_content" android:textColor="#FFFF00"
+				android:id="@+id/product_price" android:layout_alignParentTop="true"
+				android:layout_marginLeft="2dip" android:layout_centerInParent="true" android:layout_toRightOf="@+id/lbl_currency"></TextView>
+		</RelativeLayout>
+	</LinearLayout>
+
+
+
+</RelativeLayout>

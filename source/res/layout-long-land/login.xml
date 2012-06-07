@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dip"
+        android:background="@drawable/screen_bg"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/header_include"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header" >
+        </include>
+<!-- <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical" > -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/login_bg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@drawable/login_header"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="18dip"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/login_bg"
+                        android:fitsSystemWindows="true" >
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/login_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="9dip"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/login_header" >
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/email_pwd_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/login_header"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dip"
+                        android:orientation="vertical"
+                        android:padding="15dip" >
+
+                        <TextView
+                            android:id="@+id/lbl_email"
+                            style="@style/TextViewStyle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Email Address" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_email"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:background="@drawable/round_corner"
+                            android:hint="Enter Email ID"
+                            android:inputType="textEmailAddress"
+                            android:lines="1" />
+
+                        <TextView
+                            android:id="@+id/lbl_password"
+                            style="@style/TextViewStyle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dip"
+                            android:text="Password"
+                            android:width="55dip" />
+
+                        <EditText
+                            android:id="@+id/txt_password"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:background="@drawable/round_corner"
+                            android:hint="Enter Password"
+                            android:inputType="textPassword"
+                            android:lines="1" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/login_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/login_header"
+                        android:layout_below="@+id/email_pwd_layout"
+                        android:layout_marginRight="18dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/login_btn" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/email_pwd_layout"
+                        android:layout_toRightOf="@+id/login_btn"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/cancel_btn" >
+                    </ImageButton>
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/register_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dip"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/register_btn" >
+                </ImageButton>
+            </LinearLayout>
+        </ScrollView>
+    <!-- </LinearLayout> -->
+</LinearLayout>
+    <com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:weightSum="1" />
+
+</FrameLayout>

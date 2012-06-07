@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+ -->
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent">
+		<LinearLayout android:gravity="center_horizontal"
+			android:orientation="vertical" android:layout_width="match_parent"
+			android:layout_height="match_parent" android:weightSum="1"
+			android:background="@drawable/screen_bg">
+			<include android:layout_height="wrap_content" layout="@layout/header"
+				android:id="@+id/header_include" android:layout_width="fill_parent"></include>
+				<include layout="@layout/tabbar" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/tabbar_include"></include>
+			<TextView android:background="@drawable/product_detail_title"
+				android:gravity="center" android:layout_height="wrap_content"
+				android:id="@+id/check_out_title" android:textColor="#FFFFFF"
+				android:layout_gravity="center"
+				android:textSize="16dip" android:textStyle="normal"
+				android:typeface="sans" android:text="Order Status" android:layout_width="match_parent"></TextView>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/order_comments_layout"
+				android:orientation="vertical">
+				<TextView android:layout_height="wrap_content"
+					android:layout_width="match_parent" android:gravity="left"
+					android:layout_centerInParent="true" android:id="@+id/order_status_title"
+					android:text="Order Status" style="@style/TextViewStyle"
+					android:layout_marginTop="10dip" android:layout_marginLeft="5dip"></TextView>
+				<LinearLayout android:layout_width="fill_parent"
+					android:id="@+id/order_comments_tab" android:background="@drawable/order_status_msg_bg"
+					android:layout_margin="5dip" android:layout_height="fill_parent"
+					android:orientation="vertical" android:padding="5dip">
+					<TextView style="@style/OrderReviewTextViewStyle" android:padding="2dip" android:id="@+id/TextView03" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your order is complete !" android:gravity="left" android:textColor="#FFF"></TextView>
+					<RelativeLayout android:id="@+id/tab_layout" android:layout_gravity="fill_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+						<TextView style="@style/OrderReviewTextViewStyle" android:padding="2dip" android:layout_alignParentLeft="true" android:layout_height="wrap_content" android:id="@+id/TextView02" android:layout_centerInParent="true" android:text="Your order number is " android:gravity="left" android:textColor="#FFF" android:layout_alignParentTop="true" android:layout_width="wrap_content"></TextView>
+						<TextView style="@style/OrderReviewTextViewStyle" android:padding="2dip" android:layout_height="wrap_content" android:id="@+id/order_no" android:layout_centerInParent="true" android:gravity="left" android:textColor="#FFF" android:layout_alignParentTop="true" android:layout_toRightOf="@+id/TextView02" android:layout_width="match_parent" android:text="0"></TextView>
+					</RelativeLayout>
+					<TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+						android:gravity="left" android:textColor="#FFF"
+						android:layout_alignParentTop="true"
+						android:layout_alignParentLeft="true" style="@style/OrderReviewTextViewStyle" android:padding="2dip" android:id="@+id/TextView03" android:text="Thank you for shopping at Phresco. While logged in, you may contine shopping or view your order status."></TextView>
+				</LinearLayout>
+			</LinearLayout>
+
+
+		</LinearLayout>
+		<com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_gravity="bottom" android:gravity="bottom"
+			android:layout_marginTop="30dip" android:weightSum="1" />
+
+	</FrameLayout>
+<!-- </ScrollView> -->

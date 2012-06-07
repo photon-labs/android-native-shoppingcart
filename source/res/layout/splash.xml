@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+ -->
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent">
+		<LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+			android:layout_height="match_parent" android:layout_gravity="center" android:gravity="center_horizontal" android:background="@drawable/splash_screen">
+			<LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:orientation="vertical" android:gravity="center_vertical|center_horizontal" android:layout_height="match_parent">
+				<ImageView android:adjustViewBounds="true" android:id="@+id/splash_logo" android:layout_height="wrap_content" android:background="@drawable/splash_logo" android:layout_width="wrap_content" android:layout_gravity="center"></ImageView>
+			</LinearLayout>
+</LinearLayout>
+		<RelativeLayout android:layout_width="match_parent" android:id="@+id/version_layout" android:layout_marginBottom="10dip" android:layout_height="wrap_content" android:layout_gravity="bottom">
+			<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" style="@style/TextViewStyle" android:id="@+id/version_no" android:layout_centerInParent="true"></TextView>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/version_no_lbl" android:text="V" android:layout_toLeftOf="@+id/version_no" style="@style/TextViewStyle" android:layout_centerInParent="true"></TextView>
+		</RelativeLayout>
+		<LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout2" android:orientation="vertical" android:layout_height="wrap_content" android:gravity="center" android:layout_gravity="bottom|center_horizontal" android:layout_marginBottom="50dip">
+			<TextView android:layout_width="wrap_content" style="@style/TextViewStyle" android:text="@string/powered_by" android:layout_height="wrap_content" android:id="@+id/textView1"></TextView>
+		</LinearLayout>
+</FrameLayout>
+<!-- </ScrollView> -->

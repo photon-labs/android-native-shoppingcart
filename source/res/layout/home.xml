@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"> -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout android:gravity="center_horizontal"
+		android:orientation="vertical" android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_gravity="center"
+		android:background="@drawable/screen_bg">
+		<include android:layout_height="wrap_content" layout="@layout/header"
+			android:id="@+id/header_include" android:layout_width="fill_parent"></include>
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:padding="10dip"
+			android:id="@+id/search_layout" android:background="@drawable/search_bg">
+			<ImageButton android:adjustViewBounds="true"
+				android:id="@+id/home_search_btn" android:background="@drawable/home_search_btn"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_alignParentRight="true" android:layout_marginLeft="5dip"
+				android:layout_centerInParent="true"></ImageButton>
+			<EditText android:layout_height="wrap_content"
+				android:background="@drawable/round_corner"
+				android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+				android:id="@+id/txt_search" android:layout_width="fill_parent"
+				android:layout_toLeftOf="@+id/home_search_btn" android:hint="Search"
+				android:layout_centerInParent="true" android:focusableInTouchMode="true">
+			</EditText>
+		</RelativeLayout>
+		<ScrollView android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:layout_marginBottom="49dip" android:layout_marginLeft="3dip"
+			android:layout_marginRight="3dip" android:layout_marginTop="13dip">
+			<LinearLayout android:background="@drawable/home_bg"
+				android:layout_width="match_parent" android:id="@+id/home_icons_layout"
+				android:orientation="vertical" android:layout_height="match_parent">
+				<RelativeLayout android:orientation="horizontal"
+					android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:layout_marginTop="23dip" android:id="@+id/relativeLayout1"
+					android:layout_gravity="center">
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="center" android:id="@+id/browse_layout"
+						android:layout_width="wrap_content" android:layout_centerInParent="true"
+						android:layout_alignParentLeft="true" android:layout_marginLeft="55dip">
+						<ImageButton android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:id="@+id/home_browse_btn"
+							android:layout_height="wrap_content" android:background="@drawable/browse_icon"
+							android:layout_alignParentTop="true"
+							android:layout_centerInParent="true"></ImageButton>
+					</RelativeLayout>
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="center" android:id="@+id/special_offer_layout"
+						android:layout_width="wrap_content" android:layout_centerInParent="true"
+						android:layout_alignParentRight="true" android:layout_marginRight="55dip">
+						<ImageButton android:adjustViewBounds="true"
+							android:id="@+id/home_offers_btn" android:layout_height="wrap_content"
+							android:background="@drawable/specialoffer_icon"
+							android:layout_alignParentTop="true"
+							android:layout_centerInParent="true" android:layout_width="wrap_content"></ImageButton>
+					</RelativeLayout>
+				</RelativeLayout>
+				<RelativeLayout android:orientation="horizontal"
+					android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:layout_marginTop="23dip" android:id="@+id/relativeLayout2"
+					android:layout_gravity="center">
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="center" android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content" android:layout_centerInParent="true"
+						android:id="@+id/login_layout" android:layout_marginLeft="55dip">
+						<ImageButton android:adjustViewBounds="true"
+							android:layout_height="wrap_content"
+							android:layout_alignParentTop="true"
+							android:layout_centerInParent="true" android:layout_width="wrap_content"
+							android:id="@+id/home_login_btn" android:background="@drawable/login_icon"/>
+						<ImageButton android:adjustViewBounds="true"
+							android:layout_height="wrap_content"
+							android:layout_alignParentTop="true"
+							android:layout_centerInParent="true" 
+							android:layout_width="wrap_content"
+							android:id="@+id/home_login_disable_btn" 
+							android:background="@drawable/login_icon_disable"
+							android:visibility="invisible"/>
+					</RelativeLayout>
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="center" android:layout_alignParentRight="true"
+						android:layout_width="wrap_content" android:layout_centerInParent="true"
+						android:layout_marginRight="55dip" android:id="@+id/register_layout">
+						<ImageButton android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:layout_alignParentTop="true"
+							android:layout_centerInParent="true" android:id="@+id/home_register_btn"
+							android:background="@drawable/register_icon"/>
+						<ImageButton android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:layout_alignParentTop="true"
+							android:layout_centerInParent="true" android:id="@+id/home_register_disable_btn"
+							android:background="@drawable/register_icon_disable"/>
+					</RelativeLayout>
+				</RelativeLayout>
+			</LinearLayout>
+		</ScrollView>
+	</LinearLayout>
+	<com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_gravity="bottom" android:weightSum="1" />
+</FrameLayout>
+<!-- </ScrollView> -->

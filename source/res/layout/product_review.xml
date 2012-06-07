@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/screen_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/header_include"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header" >
+        </include>
+
+        <include
+            android:id="@+id/tabbar_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/tabbar" >
+        </include>
+
+        <TextView
+            android:id="@+id/product_reviewl_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-1dip"
+            android:background="@drawable/product_detail_title"
+            android:gravity="center"
+            android:text="Customer Review"
+            android:textColor="#FFFFFF"
+            android:textSize="16dip"
+            android:typeface="normal" >
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/avg_ratings_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/review_subheader" >
+
+            <TextView
+                android:id="@+id/avg_review_lbl"
+                style="@style/BlueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dip"
+                android:text="Average Customer Review:" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/avg_review_cnt"
+                style="@style/BlueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/avg_review_lbl" >
+            </TextView>
+
+            <RatingBar
+                android:id="@+id/product_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/avg_review_cnt"
+                android:isIndicator="true"
+                android:minHeight="20dp"
+                android:numStars="5"
+                android:paddingTop="2dip"
+                android:progressDrawable="@drawable/rating_bar"
+                android:rating="0" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ratings_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:padding="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/ratings_5star_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="2dip" >
+
+                <TextView
+                    android:id="@+id/lbl_5star"
+                    style="@style/BlueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="5 Star :"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/pb_5star"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/lbl_5star" >
+                </ProgressBar>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ratings_4star_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="2dip" >
+
+                <TextView
+                    android:id="@+id/lbl_4star"
+                    style="@style/BlueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="4 Star :"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/pb_4star"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/lbl_4star" >
+                </ProgressBar>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ratings_3star_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="2dip" >
+
+                <TextView
+                    android:id="@+id/lbl_3star"
+                    style="@style/BlueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="3 Star :"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/pb_3star"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/lbl_3star" >
+                </ProgressBar>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ratings_2star_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="2dip" >
+
+                <TextView
+                    android:id="@+id/lbl_2star"
+                    style="@style/BlueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="2 Star :"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/pb_2star"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/lbl_2star" >
+                </ProgressBar>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ratings_1star_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="2dip" >
+
+                <TextView
+                    android:id="@+id/lbl_1star"
+                    style="@style/BlueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="1 Star :"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/pb_1star"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/lbl_1star" >
+                </ProgressBar>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/product_review_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:choiceMode="singleChoice" />
+
+        <ImageButton
+            android:id="@+id/review_comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:layout_marginBottom="75dip"
+            android:background="@drawable/submit_review_btn" />
+    </LinearLayout>
+
+    <com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="0.25" />
+
+</FrameLayout><!-- </ScrollView> -->

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World!</string>
+	<string name="app_name">Shopping Cart</string>
+	<string name="button">Click Me</string>
+	<string name="powered_by">Powered by: phresco.com</string>
+	<string name="empty_cart_message">There are no products in your cart.. Add product to
+		your cart
+	</string>
+	<string name="empty_review_comment_message">There are no comment for this product</string>
+	<string name="empty_review_comment">comment is required</string>
+	<string name="empty_review_rating">Rating is required</string>
+	
+	<string name="http_connect_error_message">Could not connect to server.. Please try again
+		later.\n\nMake sure that your device Wi-Fi is connected and the server is also running.
+	</string>
+
+	<!-- Progress dialog messages -->
+	<string name="load_configuration">Loading configurations from server... Please wait
+	</string>
+	<string name="load_menus">Downloading menus... Please wait</string>
+	<string name="load_categories">Loading categories from server... Please wait
+	</string>
+	<string name="load_products">Loading products from server... Please wait
+	</string>
+	<string name="load_product_details">Loading product details from server... Please wait
+	</string>
+	<string name="load_product_reviews">Loading product reviews from server... Please wait
+	</string>
+	<string name="login_auth">Validating credentials... Please wait</string>
+	<string name="registration_auth">Registration in process... Please wait</string>
+	<string name="order_submit">Sending order details to server... Please wait
+	</string>
+	<string name="submit_product_comment">Sending comment to server... Please wait</string>
+	<string name="review_login_required">You must login or register to post the review</string>
+
+	<!-- Error messages - Check out screen -->
+	<string name="first_name_required">First name is required</string>
+	<string name="address_required">Address is required</string>
+	<string name="city_required">City is required</string>
+	<string name="state_required">State is required</string>
+	<string name="country_required">Country is required</string>
+	<string name="zipcode_required">Zip code is required</string>
+
+	<!-- Error messages - Login / Registration / Custom email screen -->
+	<string name="first_name">First name is required</string>
+	<string name="last_name">Last name is required</string>
+	<string name="email_required">Email address is required</string>
+	<string name="invalid_email">Invalid Email address!</string>
+	<string name="password_required">Password is required</string>
+	<string name="invalid_confirm_password">Confirm password must match with password</string>
+
+
+	<!-- Saved Addresses (Implementation needs to be discussed) -->
+	<string-array name="saved_address">
+		<item>Select</item>
+		<item>Address 1</item>
+		<item>Address 2</item>
+		<item>Address 3</item>
+	</string-array>
+
+	<!-- List of countries -->
+	<string-array name="country_list">
+		<item>US</item>
+	</string-array>
+
+	<!-- List of US States -->
+	<string-array name="us_state_list">
+		<item>AL</item>
+		<item>AK</item>
+		<item>AZ</item>
+		<item>AR</item>
+		<item>CA</item>
+		<item>CO</item>
+		<item>CT</item>
+		<item>DE</item>
+		<item>FL</item>
+		<item>GA</item>
+		<item>HI</item>
+		<item>ID</item>
+		<item>IL</item>
+		<item>IN</item>
+		<item>IA</item>
+		<item>KS</item>
+		<item>KY</item>
+		<item>LA</item>
+		<item>ME</item>
+		<item>MD</item>
+		<item>MA</item>
+		<item>MI</item>
+		<item>MN</item>
+		<item>MS</item>
+		<item>MO</item>
+		<item>MT</item>
+		<item>NE</item>
+		<item>NV</item>
+		<item>NH</item>
+		<item>NJ</item>
+		<item>NM</item>
+		<item>NY</item>
+		<item>NC</item>
+		<item>ND</item>
+		<item>OH</item>
+		<item>OK</item>
+		<item>OR</item>
+		<item>PA</item>
+		<item>RI</item>
+		<item>SC</item>
+		<item>SD</item>
+		<item>TN</item>
+		<item>TX</item>
+		<item>UT</item>
+		<item>VT</item>
+		<item>VA</item>
+		<item>WA</item>
+		<item>WV</item>
+		<item>WI</item>
+		<item>WY</item>
+	</string-array>
+
+
+</resources>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"> -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:orientation="vertical" android:layout_width="match_parent">
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" android:weightSum="1"
+		android:background="@drawable/checkout_delivery_info_bg"
+		android:padding="8dip" android:layout_height="wrap_content" android:layout_gravity="top|fill_horizontal">
+		
+		<TextView android:layout_height="wrap_content"
+			android:textColor="#FFFFFF" android:layout_width="wrap_content"
+			android:id="@+id/delivery_info_title"
+			android:text="Enter your delivery address and information here"
+			android:layout_marginBottom="5dip" android:layout_marginTop="5dip" android:gravity="top|left" android:layout_gravity="fill_horizontal"/>
+		
+		<RelativeLayout android:id="@+id/delivery_first_name_tab"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:layout_gravity="fill_horizontal" android:padding="5dip"
+			android:visibility="visible">
+
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:text="First Name" android:id="@+id/delivery_first_name_lbl"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/delivery_first_name_lbl"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:inputType="textPersonName"
+				android:layout_alignParentRight="true" android:layout_marginLeft="21dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:id="@+id/delivery_first_name" android:layout_toRightOf="@+id/delivery_first_name_lbl"
+				android:hint="First Name"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible"
+			android:id="@+id/delivery_last_name_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_last_name_lbl" android:text="Last Name"/>
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_last_name"
+				android:inputType="textPersonName" android:layout_toRightOf="@+id/delivery_last_name_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="22dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/delivery_first_name" android:hint="Last Name"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/delivery_company_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_company_lbl" android:text="Company"/>
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_company"
+				android:layout_toRightOf="@+id/delivery_company_lbl"
+				android:layout_marginLeft="30dip" android:layout_width="fill_parent"
+				android:layout_centerInParent="true" android:layout_alignLeft="@+id/delivery_first_name"
+				android:inputType="text" android:layout_alignParentRight="true"
+				android:hint="Company Name"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible"
+			android:id="@+id/delivery_address1_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_address1_lbl" android:text="Address 1"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/delivery_address1_lbl"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_address1"
+				android:layout_toRightOf="@+id/delivery_address1_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="27dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/delivery_first_name"
+				android:inputType="textPostalAddress" android:hint="Address 1"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible"
+			android:id="@+id/delivery_address2_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_address2_lbl" android:text="Address 2"/>
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_address2"
+				android:layout_toRightOf="@+id/delivery_address2_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="27dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/delivery_first_name"
+				android:inputType="textPostalAddress" android:hint="Address 2"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/delivery_city_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_city_lbl" android:text="City"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/delivery_city_lbl" android:layout_marginLeft="4dip"
+				android:layout_width="wrap_content" android:layout_marginTop="5dip"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_city"
+				android:layout_toRightOf="@+id/delivery_city_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="70dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/delivery_first_name"
+				android:inputType="textPostalAddress" android:hint="City"/>
+			 
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/delivery_state_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_state_lbl" android:text="State / Province"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/delivery_state_lbl"
+				android:layout_width="wrap_content" android:layout_marginTop="9dip"
+				 android:text="*" />
+			
+			<Spinner android:layout_toRightOf="@+id/delivery_state_lbl"
+				android:id="@+id/delivery_state" android:layout_marginLeft="10dip"
+				android:layout_centerInParent="true" android:layout_width="fill_parent"
+				android:layout_alignParentRight="true" android:entries="@array/us_state_list"
+				android:layout_height="wrap_content"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/delivery_country_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_country_lbl" android:text="Country"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/delivery_country_lbl"
+				android:layout_width="wrap_content" android:layout_marginTop="9dip"
+				 android:text="*" />
+			
+			<Spinner android:layout_toRightOf="@+id/delivery_country_lbl"
+				android:id="@+id/delivery_country" android:layout_marginLeft="65dip"
+				android:layout_centerInParent="true" android:layout_width="fill_parent"
+				android:layout_alignParentRight="true" android:entries="@array/country_list"
+				android:layout_height="wrap_content"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/delivery_zipcode_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_zipcode_lbl" android:text="Zip Code"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/delivery_zipcode_lbl"
+				android:layout_width="wrap_content" android:layout_marginTop="3dip"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_zipcode"
+				android:layout_toRightOf="@+id/delivery_zipcode_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="37dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/delivery_first_name" 
+				android:inputType="number" android:hint="600089" android:maxLength="6"
+				 android:digits="0123456789" android:lines="1"/>
+			 
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/delivery_phone_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/delivery_phone_lbl" android:text="Phone"/>
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/delivery_phone"
+				android:layout_toRightOf="@+id/delivery_phone_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="53dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/delivery_first_name"
+				android:inputType="phone" android:maxLength="10" android:hint="9742854632"
+				android:digits="0123456789-" android:lines="1"/>
+			 
+		</RelativeLayout>
+	
+	</LinearLayout>
+
+</FrameLayout>
+<!-- </ScrollView> -->

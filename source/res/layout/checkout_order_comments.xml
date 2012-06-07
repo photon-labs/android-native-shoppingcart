@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+ -->
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent">
+		<LinearLayout android:layout_width="match_parent" android:weightSum="1" android:orientation="vertical" android:padding="8dip" android:background="@drawable/checkout_payment_method_bg" android:layout_height="wrap_content" android:layout_gravity="top|fill_horizontal">
+			<TextView android:layout_width="wrap_content" android:gravity="center" android:textColor="#FFFFFF" android:text="Use this area for special instructions or questions regarding your order." android:layout_height="wrap_content" android:layout_marginBottom="25dip" android:id="@+id/lbl_order_comments_title" android:layout_marginTop="5dip" android:layout_gravity="fill_horizontal"></TextView>
+			<TextView android:layout_width="wrap_content" android:text="Order Comments" android:layout_height="wrap_content" style="@style/TextViewStyle" android:id="@+id/lbl_order_comments" android:layout_gravity="fill_horizontal" android:layout_marginLeft="8dip"></TextView>
+			<EditText android:layout_marginTop="5dip" android:layout_width="fill_parent" android:background="@drawable/round_corner" android:id="@+id/txt_order_comments" android:inputType="textMultiLine" android:layout_margin="5dip" android:layout_height="90dip" android:gravity="top|left" android:padding="5dip" android:scrollbars="vertical"></EditText>
+		</LinearLayout>
+	</FrameLayout>
+<!-- </ScrollView> -->

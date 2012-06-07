@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:id="@+id/menubar_layout"
+	android:gravity="bottom|center" android:layout_gravity="bottom|center"
+	android:layout_height="73dip" android:background="@drawable/tabbar_bg" android:minHeight="73dip">
+	<!--
+	<ImageButton android:id="@+id/home_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" android:src="@drawable/menubar_home"
+		android:background="@drawable/home_btn_normal"
+		android:adjustViewBounds="true" android:tag="home"></ImageButton>
+	<ImageButton android:id="@+id/search_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" android:src="@drawable/menubar_search"
+		android:background="@drawable/search_btn_normal"
+		android:adjustViewBounds="true" android:tag="search"
+		android:layout_toRightOf="@+id/home_btn"></ImageButton>
+	<ImageButton android:background="@drawable/mycart_btn_normal"
+		android:layout_width="wrap_content" android:id="@+id/mycart_btn"
+		android:layout_centerHorizontal="true" android:layout_toRightOf="@+id/search_btn"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+		android:src="@drawable/menubar_mycart" android:adjustViewBounds="true"
+		android:tag="mycart"></ImageButton>
+	<ImageButton android:background="@drawable/specialoffer_btn_normal"
+		android:layout_width="wrap_content" android:id="@+id/offers_btn"
+		android:layout_toRightOf="@+id/mycart_btn" android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" android:src="@drawable/menubar_offers"
+		android:adjustViewBounds="true" android:tag="offers"></ImageButton>
+	<ImageButton android:layout_width="wrap_content"
+		android:id="@+id/more_btn" android:layout_toRightOf="@+id/offers_btn"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+		android:tag="more" android:src="@drawable/more_btn_normal"
+		android:background="@drawable/more_btn_normal"
+		android:adjustViewBounds="true"></ImageButton>
+
+		-->
+
+</RelativeLayout>

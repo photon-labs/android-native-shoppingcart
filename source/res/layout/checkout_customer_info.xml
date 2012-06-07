@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout android:id="@+id/relativeLayout1"
+		android:layout_width="fill_parent" android:background="@drawable/checkout_customer_info_bg"
+		android:padding="5dip" android:orientation="vertical" android:gravity="center" android:layout_height="wrap_content">
+		<TextView android:gravity="top|center_horizontal"
+			android:ellipsize="end" android:layout_width="match_parent" style="@style/TextViewStyle"
+			android:textSize="12dip" android:layout_height="wrap_content"
+			android:text="Order information will be sent to your registered Email address listed below:"
+			android:id="@+id/category_title"></TextView>
+		<TextView style="@style/TextViewStyle" android:layout_width="match_parent"
+			android:text="android.tester@photoninfotech.net" android:ellipsize="end"
+			android:layout_height="wrap_content" android:layout_marginTop="5dip"
+			android:textSize="13dip" android:id="@+id/txt_email" android:gravity="center_horizontal"></TextView>
+		<ImageButton android:background="@drawable/edit_btn"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:adjustViewBounds="true" android:layout_centerHorizontal="true"
+			android:layout_marginTop="5dip"
+			android:id="@+id/edit_email_btn" android:layout_marginBottom="20dip"></ImageButton>
+	</LinearLayout>
+</FrameLayout>

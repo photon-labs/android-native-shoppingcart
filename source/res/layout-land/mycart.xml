@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center"
+        android:background="@drawable/screen_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" android:weightSum="0.75">
+
+        <include
+            android:id="@+id/header_include"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header" >
+        </include>
+
+        <include
+            android:id="@+id/tabbar_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            layout="@layout/tabbar" >
+        </include>
+
+        <!--
+             <ScrollView android:orientation="vertical" android:layout_width="match_parent"
+			android:layout_height="match_parent">
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginBottom="158dip"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/product_detail_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-1dip"
+                android:background="@drawable/product_detail_title"
+                android:gravity="center"
+                android:text="My Cart"
+                android:textColor="#FFFFFF"
+                android:textSize="16dip"
+                android:textStyle="normal"
+                android:typeface="sans" >
+            </TextView>
+
+            <ListView
+                android:id="@+id/mycart_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.33"
+                android:choiceMode="singleChoice"
+                android:descendantFocusability="beforeDescendants" >
+            </ListView>
+        </LinearLayout>
+        <!-- </ScrollView> -->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/subtotal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="120dip"
+        android:background="@drawable/subtotal_bg" >
+
+        <TextView
+            android:id="@+id/lbl_subtotal"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView01"
+            android:layout_alignBottom="@+id/TextView01"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/lbl_amount"
+            android:text="Sub Total: "
+            android:textColor="#165988" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/lbl_amount"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="0"
+            android:textColor="#165988" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/lbl_currency"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lbl_amount"
+            android:layout_alignBottom="@+id/lbl_amount"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/lbl_amount"
+            android:text="$"
+            android:textColor="#165988" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="75dip"
+        android:layout_marginTop="15dip" android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/update_cart_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/view_cart_button"
+            android:adjustViewBounds="true"
+            android:background="@drawable/update_cart_btn" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/view_cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/view_mycart_btn" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dip"
+        android:weightSum="1" />
+
+</FrameLayout><!-- </ScrollView> -->

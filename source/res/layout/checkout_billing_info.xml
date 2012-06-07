@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"> -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" android:weightSum="1"
+		android:background="@drawable/checkout_billing_info_bg"
+		android:padding="8dip" android:layout_height="wrap_content" android:layout_gravity="top|fill_horizontal">
+		<TextView android:layout_height="wrap_content"
+			android:textColor="#FFFFFF" android:layout_width="wrap_content"
+			android:layout_marginBottom="5dip"
+			android:id="@+id/billing_info_title" android:text="Enter your billing address and information here"
+			android:layout_marginTop="5dip" android:gravity="top|left" android:layout_gravity="fill_horizontal"></TextView>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible"
+			android:id="@+id/billing_address_checkbox_tab">
+			<CheckBox android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="My billing information is same as my delivery information"
+				android:id="@+id/chk_billing_adderss" android:gravity="left" android:layout_alignParentLeft="true"></CheckBox>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible"
+			android:id="@+id/billing_first_name_tab">
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_first_name_lbl" android:text="First Name"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/billing_first_name_lbl"
+				android:layout_marginTop="3dip"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_first_name"
+				android:inputType="textPersonName" android:layout_toRightOf="@+id/billing_first_name_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="27dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:hint="First Name">
+			</EditText>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible"
+			android:id="@+id/billing_last_name_tab">
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_last_name_lbl" android:text="Last Name"></TextView>
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_last_name"
+				android:inputType="textPersonName" android:layout_toRightOf="@+id/billing_last_name_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="27dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/billing_first_name" android:hint="Last Name">
+			</EditText>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_company_tab">
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_company_lbl" android:text="Company"></TextView>
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_company"
+				android:layout_marginLeft="35dip" android:layout_width="fill_parent"
+				android:layout_centerInParent="true" android:layout_alignLeft="@+id/billing_first_name"
+				android:inputType="text" android:layout_alignParentRight="true"
+				android:layout_toRightOf="@+id/billing_company_lbl" android:hint="Company Name">
+			</EditText>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_address1_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_address1_lbl" android:text="Address 1"/>
+			
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/billing_address1_lbl"
+				android:layout_width="wrap_content"
+				android:layout_marginTop="2dip"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_address1"
+				android:layout_toRightOf="@+id/billing_address1_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="31dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/billing_first_name"
+				android:inputType="textPostalAddress" android:hint="Address 1"/>
+			
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_address2_tab">
+		
+		    	<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_address2_lbl" android:text="Address 2"/>
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_address2"
+				android:layout_toRightOf="@+id/billing_address2_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="31dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/billing_first_name"
+				android:inputType="textPostalAddress" android:hint="Address 2"/>
+			 
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_city_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_city_lbl" android:text="City"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_marginTop="2dip"
+				android:layout_toRightOf="@id/billing_city_lbl"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_city"
+				android:layout_toRightOf="@+id/billing_city_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="74dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/billing_first_name"
+				android:inputType="textPostalAddress" android:hint="City"/>
+			 
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_state_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_state_lbl" android:text="State / Province"/>
+			
+			<TextView android:layout_height="wrap_content"
+				  android:textSize="16dip" android:textColor="#FF0000"
+				  android:layout_marginTop="9dip"
+				android:layout_toRightOf="@id/billing_state_lbl"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<Spinner android:layout_toRightOf="@+id/billing_state_lbl"
+				android:id="@+id/billing_state" android:layout_marginLeft="10dip"
+				android:layout_centerInParent="true" android:layout_width="fill_parent"
+				android:layout_alignParentRight="true" android:entries="@array/us_state_list"
+				android:layout_height="wrap_content"/>
+		
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_country_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_country_lbl" android:text="Country"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_marginTop="9dip"
+				android:layout_toRightOf="@id/billing_country_lbl"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<Spinner android:layout_toRightOf="@+id/billing_country_lbl"
+				android:id="@+id/billing_country" android:layout_marginLeft="65dip"
+				android:layout_centerInParent="true" android:layout_width="fill_parent"
+				android:layout_alignParentRight="true" android:entries="@array/country_list"
+				android:layout_height="wrap_content"/>
+		
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_zipcode_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_zipcode_lbl" android:text="Zip Code"/>
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FF0000" android:textSize="16dip"
+				android:layout_toRightOf="@id/billing_zipcode_lbl"
+				android:layout_width="wrap_content"
+				 android:text="*" />
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_zipcode"
+				android:layout_toRightOf="@+id/billing_zipcode_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="32dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/billing_first_name"
+				android:inputType="number" android:hint="600089" android:maxLength="6"
+				 android:digits="0123456789"/>
+		
+		</RelativeLayout>
+		
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+			android:padding="5dip" android:visibility="visible" android:id="@+id/billing_phone_tab">
+			
+			<TextView android:layout_height="wrap_content"
+				android:textColor="#FFFFFF" android:textSize="16dip"
+				android:textStyle="normal" android:typeface="sans" android:gravity="left"
+				android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+				android:id="@+id/billing_phone_lbl" android:text="Phone"/>
+			
+			<EditText android:background="@drawable/round_corner"
+				android:layout_height="wrap_content" android:id="@+id/billing_phone"
+				android:layout_toRightOf="@+id/billing_phone_lbl"
+				android:layout_alignParentRight="true" android:layout_marginLeft="48dip"
+				android:layout_width="fill_parent" android:layout_centerInParent="true"
+				android:layout_alignLeft="@+id/billing_first_name" android:digits="0123456789-"
+				android:inputType="phone" android:maxLength="10" android:hint="9742854632"
+				android:lines="1"/>
+		 
+		</RelativeLayout>
+	
+	</LinearLayout>
+
+</FrameLayout>
+<!-- </ScrollView> -->

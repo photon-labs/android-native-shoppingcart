@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:layout_gravity="top|center">
+
+    <ImageButton
+        android:id="@+id/tab_browse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="2dip"
+        android:layout_marginTop="4dip"
+        android:adjustViewBounds="true"
+        android:background="@drawable/browse_tab_selected" android:layout_marginLeft="3dip">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/tab_specialoffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dip"
+        android:layout_marginRight="2dip"
+        android:layout_marginTop="4dip"
+        android:layout_toRightOf="@+id/tab_browse"
+        android:adjustViewBounds="true"
+        android:background="@drawable/specialoffer_tab_normal" >
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/tab_mycart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dip"
+        android:layout_marginRight="4dip"
+        android:layout_marginTop="4dip"
+        android:layout_toRightOf="@+id/tab_specialoffer"
+        android:adjustViewBounds="true"
+        android:background="@drawable/mycart_tab_normal" >
+    </ImageButton>
+
+</RelativeLayout>

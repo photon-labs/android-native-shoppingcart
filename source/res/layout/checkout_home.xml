@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"> -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:background="@drawable/screen_bg" android:layout_gravity="center_horizontal"
+		android:gravity="center_horizontal">
+		<include android:layout_height="wrap_content" layout="@layout/header"
+			android:id="@+id/header_include" android:layout_width="fill_parent"></include>
+		<include layout="@layout/tabbar" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/tabbar_include"></include>
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:layout_gravity="top|center_horizontal" android:weightSum="0.5">
+			<ScrollView android:orientation="vertical"
+				android:layout_width="match_parent" android:layout_height="match_parent">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="match_parent" android:layout_height="match_parent"
+					android:layout_gravity="top|center_horizontal">
+					<TextView android:background="@drawable/product_detail_title"
+						android:gravity="center" android:layout_height="wrap_content"
+						android:id="@+id/check_out_title" android:textColor="#FFFFFF"
+						android:layout_gravity="center" android:textSize="16dip"
+						android:textStyle="normal" android:typeface="sans" android:text="Check Out"
+						android:layout_width="match_parent"></TextView>
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_width="match_parent" android:layout_gravity="fill_horizontal"
+						android:padding="5dip" android:background="@drawable/category_tab_top"
+						android:id="@+id/customer_info_tab" android:visibility="visible">
+						<ImageView android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentTop="true"
+							android:layout_alignParentLeft="true"
+							android:layout_centerInParent="true" android:layout_margin="10dip"
+							android:adjustViewBounds="true" android:id="@+id/customer_info_arrow_img"
+							android:background="@drawable/down_arrow"></ImageView>
+						<TextView android:layout_height="wrap_content"
+							android:textColor="#FFFFFF" android:textSize="16dip"
+							android:textStyle="normal" android:typeface="sans"
+							android:layout_width="match_parent" android:gravity="left"
+							android:layout_centerInParent="true" android:layout_marginLeft="5dip"
+							android:text="Customer Information" android:id="@+id/customer_info_title"
+							android:layout_toRightOf="@+id/customer_info_arrow_img"></TextView>
+					</RelativeLayout>
+					<ViewStub android:layout_height="wrap_content" android:id="@+id/customer_info"
+						android:layout="@layout/checkout_customer_info"
+						android:visibility="visible" android:layout_width="match_parent"></ViewStub>
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="fill_horizontal" android:visibility="visible"
+						android:layout_width="match_parent" android:padding="5dip"
+						android:id="@+id/delivery_info_tab" android:background="@drawable/category_tab_middle">
+						<ImageView android:layout_alignParentLeft="true"
+							android:layout_margin="10dip" android:layout_alignParentTop="true"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:id="@+id/delivery_info_arrow_img"
+							android:background="@drawable/down_arrow"></ImageView>
+						<TextView android:gravity="left" android:textStyle="normal"
+							android:textColor="#FFFFFF" android:layout_width="match_parent"
+							android:typeface="sans" android:layout_marginLeft="5dip"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:textSize="16dip"
+							android:id="@+id/delivery_info_title" android:text="Delivery Information"
+							android:layout_toRightOf="@+id/delivery_info_arrow_img"></TextView>
+					</RelativeLayout>
+					<ViewStub android:layout_height="wrap_content" android:id="@+id/delivery_info"
+						android:layout="@layout/checkout_delivery_info"
+						android:visibility="visible" android:layout_width="match_parent"></ViewStub>
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="fill_horizontal" android:visibility="visible"
+						android:layout_width="match_parent" android:padding="5dip"
+						android:id="@+id/billing_info_tab" android:background="@drawable/category_tab_middle">
+						<ImageView android:layout_alignParentLeft="true"
+							android:layout_margin="10dip" android:layout_alignParentTop="true"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:id="@+id/billing_info_arrow_img"
+							android:background="@drawable/down_arrow"></ImageView>
+						<TextView android:gravity="left" android:textStyle="normal"
+							android:textColor="#FFFFFF" android:layout_width="match_parent"
+							android:typeface="sans" android:layout_marginLeft="5dip"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:textSize="16dip"
+							android:id="@+id/billing_info_title" android:text="Billing Information"
+							android:layout_toRightOf="@+id/billing_info_arrow_img"></TextView>
+					</RelativeLayout>
+					<ViewStub android:layout_height="wrap_content" android:id="@+id/billing_info"
+						android:layout="@layout/checkout_billing_info" android:visibility="visible"
+						android:layout_width="match_parent"></ViewStub>
+
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="fill_horizontal" android:visibility="visible"
+						android:layout_width="match_parent" android:padding="5dip"
+						android:id="@+id/payment_method_tab" android:background="@drawable/category_tab_middle">
+						<ImageView android:layout_alignParentLeft="true"
+							android:layout_margin="10dip" android:layout_alignParentTop="true"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:id="@+id/payment_method_arrow_img"
+							android:background="@drawable/down_arrow"></ImageView>
+						<TextView android:gravity="left" android:textStyle="normal"
+							android:textColor="#FFFFFF" android:layout_width="match_parent"
+							android:typeface="sans" android:layout_marginLeft="5dip"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:textSize="16dip"
+							android:id="@+id/payment_method_title" android:text="Payment Method"
+							android:layout_toRightOf="@+id/payment_method_arrow_img"></TextView>
+					</RelativeLayout>
+					<ViewStub android:layout_height="wrap_content" android:id="@+id/payment_method"
+						android:layout="@layout/checkout_payment_method"
+						android:visibility="visible" android:layout_width="match_parent"></ViewStub>
+
+					<RelativeLayout android:layout_height="wrap_content"
+						android:layout_gravity="fill_horizontal" android:visibility="visible"
+						android:layout_width="match_parent" android:padding="5dip"
+						android:id="@+id/order_comment_tab" android:background="@drawable/category_tab_bottom">
+						<ImageView android:layout_alignParentLeft="true"
+							android:layout_margin="10dip" android:layout_alignParentTop="true"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:adjustViewBounds="true"
+							android:layout_width="wrap_content" android:id="@+id/order_comment_arrow_img"
+							android:background="@drawable/down_arrow"></ImageView>
+						<TextView android:gravity="left" android:textStyle="normal"
+							android:textColor="#FFFFFF" android:layout_width="match_parent"
+							android:typeface="sans" android:layout_marginLeft="5dip"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true" android:textSize="16dip"
+							android:id="@+id/payment_method_title" android:text="Order Comments"
+							android:layout_toRightOf="@+id/order_comment_arrow_img"></TextView>
+					</RelativeLayout>
+					<ViewStub android:layout_height="wrap_content" android:id="@+id/order_comment"
+						android:layout="@layout/checkout_order_comments"
+						android:visibility="visible" android:layout_width="match_parent"></ViewStub>
+
+					<RelativeLayout android:visibility="visible" android:layout_width="match_parent"
+						android:padding="5dip" android:id="@+id/buttons_tab"
+						android:layout_gravity="center" android:gravity="center" android:layout_height="fill_parent" android:paddingBottom="25dip" android:layout_marginTop="10dip" android:layout_marginBottom="70dip">
+						<ImageButton android:layout_height="wrap_content"
+							android:layout_width="wrap_content" android:layout_marginRight="18dp"
+							android:adjustViewBounds="true" android:id="@+id/review_order_btn"
+							android:background="@drawable/revieworder_btn"></ImageButton>
+						<ImageButton android:id="@+id/cancel_btn"
+							android:background="@drawable/cancel_btn" android:layout_height="wrap_content"
+							android:adjustViewBounds="true" android:layout_width="wrap_content"
+							android:layout_alignTop="@+id/review_order_btn"
+							android:layout_toRightOf="@+id/review_order_btn"></ImageButton>
+					</RelativeLayout>
+				</LinearLayout>
+			</ScrollView>
+		</LinearLayout>
+
+	</LinearLayout>
+	<com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+		android:layout_gravity="bottom" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:weightSum="1" android:layout_marginTop="70dip"/>
+</FrameLayout>
+<!-- </ScrollView> -->

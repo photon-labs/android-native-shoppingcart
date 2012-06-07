@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="55dip"
+        android:background="@drawable/screen_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/header_include"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header" >
+        </include>
+
+        <include
+            android:id="@+id/tabbar_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/tabbar" >
+        </include>
+
+        <TextView
+            android:id="@+id/product_reviewl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dip"
+            android:background="@drawable/product_detail_title"
+            android:gravity="center"
+            android:text="User Comments"
+            android:textColor="#FFFFFF"
+            android:textSize="16dip"
+            android:typeface="normal" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dip" >
+
+            <RatingBar
+                android:id="@+id/product_review_comment_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:minHeight="25dip"
+                android:numStars="5"
+                android:paddingLeft="2dip"
+                android:progressDrawable="@drawable/rating_bar"
+                android:rating="0" />
+
+            <EditText
+                android:id="@+id/user_review_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:layout_below="@id/product_review_comment_rating"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/round_corner"
+                android:focusable="true"
+                android:gravity="top"
+                android:hint="Please post your comment here"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/product_review_comment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_review_comment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="5dip"
+                android:background="@drawable/submit_review_btn" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.photon.phresco.nativeapp.eshop.activity.MenubarActivity
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="0.25" />
+
+</FrameLayout> <!-- </ScrollView> -->
