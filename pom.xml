@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">
-
-    <parent>
-        <groupId>pilots</groupId>
-        <artifactId>pilot-projects</artifactId>
-        <version>1.2.0.1001</version>
-        <relativePath>../phresco-build-scripts</relativePath>    
-    </parent>
-    
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.photon.phresco</groupId>
     <artifactId>PHR_AndroidNative</artifactId>
