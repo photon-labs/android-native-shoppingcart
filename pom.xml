@@ -6,6 +6,11 @@
     <packaging>apk</packaging>
     <name>PHR_AndroidNative</name>
     <version>1.0.0</version>
+	<inceptionYear>1999</inceptionYear>
+    <organization>
+        <name>Photon Infotech Inc.</name>
+    </organization>
+	
     <build>
         <sourceDirectory>source/src</sourceDirectory>
         <outputDirectory>do_not_checkin/target/android-classes</outputDirectory>
@@ -39,6 +44,22 @@
           </sdk>
                     <extractDuplicates>true</extractDuplicates>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                </configuration>
+            </plugin>
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>1.1</version>
+                <configuration>
+                   <verbose>false</verbose>
+                   <processStartTag>###</processStartTag>
+                   <processEndTag>###</processEndTag>
+                  <!-- <sectionDelimiter>" "</sectionDelimiter> -->
+                   <licenseName>apache_v2</licenseName>
+				   <roots>
+				   <root>source</root>
+				   <root>test</root>
+				   </roots>
                 </configuration>
             </plugin>
         </plugins>
