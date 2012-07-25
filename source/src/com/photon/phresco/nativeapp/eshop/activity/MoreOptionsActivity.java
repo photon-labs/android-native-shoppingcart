@@ -25,12 +25,16 @@
  */
 package com.photon.phresco.nativeapp.eshop.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -77,6 +81,15 @@ public class MoreOptionsActivity extends PhrescoActivity {
 			}
 		});
 
+		moreOptionsGrid.setOnItemLongClickListener(new OnItemLongClickListener() {
+			@Override
+			public boolean onItemLongClick(AdapterView<?> adapterView, View view,
+					int i, long l) {
+				showOptions();
+				return false;
+			}
+		});
+		
 		backButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -121,4 +134,18 @@ public class MoreOptionsActivity extends PhrescoActivity {
 		}
 	}
 
+	private void showOptions() {
+		final CharSequence[] items = {"Option One", "Option two", "Option Three"};
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setCancelable(true);
+		builder.setTitle("Make your selection");
+		builder.setItems(items, new DialogInterface.OnClickListener() {
+		    public void onClick(DialogInterface dialog, int item) {
+		         Toast.makeText(getBaseContext(), items[item] + " selected", Toast.LENGTH_SHORT).show();
+		    }
+		});
+		AlertDialog alert = builder.create();
+		alert.show();
+	}
 }
