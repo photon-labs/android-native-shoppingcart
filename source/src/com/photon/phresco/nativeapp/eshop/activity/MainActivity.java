@@ -77,7 +77,7 @@ public class MainActivity extends PhrescoActivity {
 			// PhrescoLogger.info(TAG + " - onCreate()********** ");
 
 			initApplicationEnvironment();
-			readConfigXML();
+			buildEnvData();
 			screenDensity = getScreenDensity();
 			readAppConfigJSON();
 

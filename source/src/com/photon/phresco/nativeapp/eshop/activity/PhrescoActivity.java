@@ -52,6 +52,7 @@ import com.google.gson.Gson;
 import com.photon.phresco.nativeapp.R;
 import com.photon.phresco.nativeapp.config.ConfigReader;
 import com.photon.phresco.nativeapp.config.Configuration;
+import com.photon.phresco.nativeapp.config.EnvConstuctor;
 import com.photon.phresco.nativeapp.eshop.core.Constants;
 import com.photon.phresco.nativeapp.eshop.logger.PhrescoLogger;
 import com.photon.phresco.nativeapp.eshop.model.appconfig.AppConfig;
@@ -76,6 +77,7 @@ public class PhrescoActivity extends Activity {
 	private static Properties properties;
 	private int screenHeight;
 	private int screenWidth;
+	private static final String WEBSERVICE_CONFIG_NAME = "Native_Eshop";
 
 	/**
 	 * @return the appConfigJSONObj
@@ -235,7 +237,12 @@ public class PhrescoActivity extends Activity {
 			PhrescoLogger.warning(ex);
 		}
 	}
-
+//	Below code is used for reading web service URL from Phresco configuration menu
+	public void buildEnvData() {
+		Constants.setRestAPI(Constants.REST_API);
+		EnvConstuctor envConstuctor = new EnvConstuctor(getResources());
+		Constants.setWebContextURL(envConstuctor.getWebServiceURL(WEBSERVICE_CONFIG_NAME));
+	}
 	/**
 	 * Make a standard toast that just contains a text view with the text from a
 	 * resource, for long time
