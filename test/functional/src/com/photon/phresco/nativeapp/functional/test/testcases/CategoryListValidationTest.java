@@ -36,13 +36,11 @@ import com.jayway.android.robotium.solo.Solo;
 
 public class CategoryListValidationTest extends TestCase {
 
-	public Solo soloBrowseValid;
-	public String TAG = "****BrowseValidationTestCase******";
+	private Solo soloBrowseValid;
+	private static final String TAG = "****BrowseValidationTestCase******";
 
 	private String activityName;
-	private ImageView addtocartButton, updatecartButton, viewmycartButton, checkoutButton, browseButton,
-			reviewOrderButton, orderComments;
-
+	private ImageView addtocartButton, updatecartButton, viewmycartButton, checkoutButton, browseButton,reviewOrderButton, orderComments;
 	private TextView customerInfo, deliveryInfo, billingInfo, paymentMethod;
 	private EditText quantityValue;
 
@@ -83,7 +81,7 @@ public class CategoryListValidationTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + soloBrowseValid.getCurrentActivity());
+				Log.i(TAG," Activity name ---->"+soloBrowseValid.getCurrentActivity());
 				ArrayList<View> al = soloBrowseValid.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -214,7 +212,7 @@ public class CategoryListValidationTest extends TestCase {
 			}
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 

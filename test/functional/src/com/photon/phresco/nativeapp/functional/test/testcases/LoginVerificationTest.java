@@ -50,7 +50,7 @@ public class LoginVerificationTest extends TestCase {
 	private String activityName;
 	private ImageView homeLoginButton, loginButton;
 	private EditText passwordField, emailField;
-	private final String TAG = "LoginTestCase***";
+	private static final String TAG = "LoginTestCase***";
 
 	public LoginVerificationTest(Solo solo) {
 		this.soloLogin = solo;
@@ -96,7 +96,7 @@ public class LoginVerificationTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + soloLogin.getCurrentActivity());
+				Log.i(TAG," Activity name ---->"+soloLogin.getCurrentActivity());
 				ArrayList<View> al = soloLogin.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -158,13 +158,14 @@ public class LoginVerificationTest extends TestCase {
 						soloLogin.waitForActivity("HomeActivity");
 						break;
 					} else if (soloLogin.waitForActivity("CustomDialogActivity", 2000)) {
+					Log.i(TAG, "wait for CustomDialogActivity for 2000 milliseconds");
 					}
 
 				}
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 
 	}

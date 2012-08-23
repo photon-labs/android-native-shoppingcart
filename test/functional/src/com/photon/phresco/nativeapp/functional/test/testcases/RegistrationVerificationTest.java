@@ -38,7 +38,7 @@ import com.photon.phresco.nativeapp.functional.test.core.Constants;
 public class RegistrationVerificationTest extends TestCase {
 
 	private Solo soloRegister;
-	private final String TAG = "*******RegisterTestcase*********";
+	private static final String TAG = "*******RegisterTestcase*********";
 	private String activityName;
 	private ImageView homeRegisterButton, registerButton, dialogBoxOK;
 	private EditText emailField, passwordField, confPassField, firstNameField, lastNameField;
@@ -81,7 +81,7 @@ public class RegistrationVerificationTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + soloRegister.getCurrentActivity());
+				Log.i(TAG," Activity name ---->"+soloRegister.getCurrentActivity());
 				ArrayList<View> al = soloRegister.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -176,7 +176,7 @@ public class RegistrationVerificationTest extends TestCase {
 			}
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 
 	}

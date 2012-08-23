@@ -41,7 +41,7 @@ public class OffersTest extends TestCase {
 
 	private Solo specialOffers;
 	private String activityName;
-	private String TAG = "****SpecialOffersTestCase*****";
+	private static final String TAG = "****SpecialOffersTestCase*****";
 	private ImageView specialOfferButton, reviewButton, cancelButton;
 	private ImageButton submitReviewButton;
 	private RatingBar ratingBar;
@@ -81,7 +81,7 @@ public class OffersTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + specialOffers.getCurrentActivity());
+				Log.i(TAG," Activity name ---->"+specialOffers.getCurrentActivity());
 				ArrayList<View> al = specialOffers.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -202,7 +202,7 @@ public class OffersTest extends TestCase {
 			}
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 	}
 }

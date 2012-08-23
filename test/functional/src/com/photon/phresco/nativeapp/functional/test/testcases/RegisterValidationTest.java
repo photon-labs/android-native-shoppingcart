@@ -80,7 +80,7 @@ public class RegisterValidationTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + soloRegisterValid.getCurrentActivity());
+				Log.i(TAG," Activity name ---->"+soloRegisterValid.getCurrentActivity());
 				ArrayList<View> al = soloRegisterValid.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -167,7 +167,7 @@ public class RegisterValidationTest extends TestCase {
 			}
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 
 	}

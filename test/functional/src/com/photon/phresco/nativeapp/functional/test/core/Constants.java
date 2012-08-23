@@ -24,9 +24,9 @@ package com.photon.phresco.nativeapp.functional.test.core;
  */
 public class Constants {
 	// Constant variables
-
 	public Constants() {
 	}
+
 
 	public static final String EMAIL_ID = "android.tester@photoninfotech.net";
 	public static final String PASSWORD = "*****";

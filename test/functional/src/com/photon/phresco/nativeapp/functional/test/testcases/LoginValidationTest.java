@@ -38,8 +38,8 @@ public class LoginValidationTest extends TestCase {
 
 	private Solo soloLoginValid;
 	private String activityName;
-	public ImageView clickCancel;
-	private String TAG = "*****LoginValidationTestCase******";
+	private ImageView clickCancel;
+	private static final String TAG = "*****LoginValidationTestCase******";
 
 	public LoginValidationTest(Solo solo) {
 		this.soloLoginValid = solo;
@@ -76,7 +76,7 @@ public class LoginValidationTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + soloLoginValid.getCurrentActivity());
+			Log.i(TAG," Activity name ---->"+soloLoginValid.getCurrentActivity());
 				ArrayList<View> al = soloLoginValid.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -139,7 +139,7 @@ public class LoginValidationTest extends TestCase {
 			soloLoginValid.waitForActivity("LoginActivity", 1000);
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 
 	}

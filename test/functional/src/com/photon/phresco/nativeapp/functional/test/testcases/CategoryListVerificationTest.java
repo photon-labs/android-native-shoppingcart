@@ -46,15 +46,14 @@ import com.photon.phresco.nativeapp.functional.test.core.Constants;
  */
 public class CategoryListVerificationTest extends TestCase {
 
-	public Solo soloBrowse;
-	public String activityName;
+	private Solo soloBrowse;
+	private String activityName;
 	private ImageView backButton, addtocartButton, updatecartButton, viewmycartButton, checkoutButton, browseButton,
 			submitorderButton, reviewOrderButton;
 	private EditText firstName, address1, cityName, zipcode, phoneNumber, billingFirst, billingCompany,
 			billingAddress1, billingCity, billingZip, quantityValue, billingLast;
 	private TextView customerInfo;
-	// private Spinner deliveryState;
-	private final String TAG = "*******BrowseVerificationTestCase****";
+	private static final String TAG = "*******BrowseVerificationTestCase****";
 
 	public CategoryListVerificationTest(Solo soloTest) {
 		this.soloBrowse = soloTest;
@@ -101,7 +100,7 @@ public class CategoryListVerificationTest extends TestCase {
 
 			if (activityName.equalsIgnoreCase("HomeActivity")) {
 				Log.i(TAG, "------HomeActivity-----------");
-				System.out.println(" Activity name ---->" + soloBrowse.getCurrentActivity());
+				Log.i(TAG," Activity name ---->"+soloBrowse.getCurrentActivity());
 				ArrayList<View> al = soloBrowse.getViews();
 				Iterator<View> it = al.iterator();
 				while (it.hasNext()) {
@@ -353,7 +352,7 @@ public class CategoryListVerificationTest extends TestCase {
 		}
 
 		catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 

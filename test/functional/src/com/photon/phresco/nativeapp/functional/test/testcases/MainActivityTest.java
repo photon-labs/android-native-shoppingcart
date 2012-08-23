@@ -50,7 +50,10 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	private CategoryListVerificationTest browseTestCase;
 	private RegistrationVerificationTest registerTestCase;
 	private RegisterValidationTest registrationValid;
-	private final String TAG = "MainTestCase****";
+	private LongPauseTest longPauseTest;
+	private FailureTest failureTest;
+
+	private static final String TAG = "****MainTestCase****";
 
 	/**
 	 * This block will be executed first and it will loads the SplashActivity .
@@ -71,7 +74,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 * 
 	 * @throws Exception
 	 */
-	public MainActivityTest() throws Exception {
+	public MainActivityTest() throws TestException {
 		super(PACKAGE_NAME, mainActivity);
 	}
 
@@ -105,8 +108,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			Log.i(TAG, "testRegististrationVerification---------End");
 
 		} catch (TestException e) {
-			e.printStackTrace();
-
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 
 	}
@@ -128,7 +130,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			Log.i(TAG, "testRegististrationValidation---------End");
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 
@@ -152,7 +154,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			Log.i(TAG, "testVerificationLogin---------End");
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 
 	}
@@ -172,7 +174,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			loginValid.testLoginValidation();
 			Log.i(TAG, "testValidationLogin---------End");
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 
@@ -185,7 +187,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 */
 
 	@Smoke
-	public void testBrowseVerification() throws TestException {
+	public void testXBrowseVerification() throws TestException {
 
 		try {
 			Log.i(TAG, "testBrowseVerification---------Start");
@@ -196,7 +198,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			Log.i(TAG, "testBrowseVerification---------End");
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 
@@ -218,7 +220,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			Log.i(TAG, "testBrowseValidation---------End");
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 
@@ -235,17 +237,67 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		try {
 			Log.i(TAG, "testSpecialOffers---------Start");
 			specialOffers = new OffersTest(soloMain);
-			// calling the test method with BrowseTestCase object
 			specialOffers.testSpecialOffers();
 			Log.i(TAG, "testSpecialOffers---------End");
 
 		} catch (TestException e) {
-			e.printStackTrace();
+			Log.e(TAG,Log.getStackTraceString(e));
+
+		}
+
+	}
+	
+	/**
+	 * 
+	 * This method will call the testWLongPause() by this we can see the test
+	 * scenario LongPause
+	 */
+	
+	public void testWLongPause() throws TestException {
+
+		try {
+			Log.i(TAG, "testSpecialOffers---------Start");
+			longPauseTest = new LongPauseTest(soloMain);
+			longPauseTest.testLongPause();
+			Log.i(TAG, "testSpecialOffers---------End");
+
+		} catch (TestException e) {
+			
+			Log.e(TAG,Log.getStackTraceString(e));
 
 		}
 
 	}
 
+	
+	
+	/**
+	 * 
+	 * This method will call the testWLongPause() by this we can see the test
+	 * scenario LongPause
+	 */
+	
+	public void testXFailure() throws TestException {
+
+		try {
+			Log.i(TAG, "testSpecialOffers---------Start");
+			failureTest = new FailureTest(soloMain);
+			failureTest.testFailure();
+			Log.i(TAG, "testSpecialOffers---------End");
+
+		} catch (TestException e) {
+			
+			Log.e(TAG,Log.getStackTraceString(e));
+
+		}
+
+	}
+
+	
+	
+	
+	
+	
 	/**
 	 * Once the testcases executed completely. This method will be called and
 	 * will close the all activities this is overridden with super class
@@ -256,8 +308,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		try {
 			soloMain.finishOpenedActivities();
-		} catch (Throwable e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			Log.e(TAG,Log.getStackTraceString(e));
 		}
 		getActivity().finish();
 		super.tearDown();
