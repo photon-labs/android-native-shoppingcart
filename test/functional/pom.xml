@@ -52,20 +52,7 @@
             <artifactId>junit</artifactId>
             <version>4.1</version>
         </dependency>
-        <dependency>
-            <groupId>com.photon.phresco</groupId>
-            <artifactId>PHR_Eshop</artifactId>
-            <version>1.0.0</version>
-            <type>apk</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.photon.phresco</groupId>
-            <artifactId>PHR_Eshop</artifactId>
-            <version>1.0.0</version>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
+        
     </dependencies>
     <properties>
         <android.version>2.3.3</android.version>
