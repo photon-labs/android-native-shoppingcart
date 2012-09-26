@@ -36,7 +36,7 @@ public class EnvConstuctor {
 	}
 
 	public String getWebServiceURL(String configName) {
-		String configJsonString = confReaderObj.getConfigAsJSON(ENV_PROD, WEB_SERVICE, configName);
+		String configJsonString = confReaderObj.getConfigAsJSON(confReaderObj.getDefaultEnvName(), WEB_SERVICE, configName);
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
 			JSONObject jsonObject = new JSONObject(configJsonString);
@@ -57,7 +57,7 @@ public class EnvConstuctor {
 
 	public String getServerURL(String configName) {
 		StringBuilder stringBuilder = new StringBuilder();
-		String configJsonString = confReaderObj.getConfigAsJSON(ENV_PROD, SERVER, configName);
+		String configJsonString = confReaderObj.getConfigAsJSON(confReaderObj.getDefaultEnvName(), SERVER, configName);
 		try {
 			JSONObject jsonObject = new JSONObject(configJsonString);
 			stringBuilder.append(jsonObject.getString("protocol"));
