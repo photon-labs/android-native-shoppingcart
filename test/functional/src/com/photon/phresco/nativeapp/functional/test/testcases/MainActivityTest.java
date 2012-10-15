@@ -91,52 +91,6 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	}
 
 	/**
-	 * With this method we can check the Registration Verification scenario by
-	 * using testRegisterScenario().
-	 * 
-	 */
-
-	public void testRegististrationVerification() throws TestException {
-
-		try {
-
-			Log.i(TAG, "testRegististrationVerification---------Start");
-			// RegisterTestcase object creating and passing Solo class object
-			registerTestCase = new RegistrationVerificationTest(soloMain);
-			// calling the test method with Register object
-			registerTestCase.testRegisterScenario(getInstrumentation());
-			Log.i(TAG, "testRegististrationVerification---------End");
-
-		} catch (TestException e) {
-			Log.e(TAG,Log.getStackTraceString(e));
-		}
-
-	}
-
-	/**
-	 * With this method we can check the Registration validation scenario .
-	 * 
-	 * @throws TestException
-	 */
-
-	@Smoke
-	public void testRegististrationValidation() throws TestException {
-
-		try {
-			Log.i(TAG, "testRegististrationValidation---------Start");
-			// creating object of the testclass RegisterValidationTestCase
-			registrationValid = new RegisterValidationTest(soloMain);
-			registrationValid.testRegisterValidation(getInstrumentation());
-			Log.i(TAG, "testRegististrationValidation---------End");
-
-		} catch (TestException e) {
-			Log.e(TAG,Log.getStackTraceString(e));
-
-		}
-
-	}
-
-	/**
 	 * This test method will execute the testLoginScenario() .It will verifies
 	 * the Login screen verification.
 	 * 
@@ -179,6 +133,54 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		}
 
 	}
+	
+	// artf549283 : As disscussed with Arunachalam sir, all the tests are commented except login validation & verification
+	
+	/**
+	 * With this method we can check the Registration Verification scenario by
+	 * using testRegisterScenario().
+	 * 
+	 */
+
+	/*public void testRegististrationVerification() throws TestException {
+
+		try {
+
+			Log.i(TAG, "testRegististrationVerification---------Start");
+			// RegisterTestcase object creating and passing Solo class object
+			registerTestCase = new RegistrationVerificationTest(soloMain);
+			// calling the test method with Register object
+			registerTestCase.testRegisterScenario(getInstrumentation());
+			Log.i(TAG, "testRegististrationVerification---------End");
+
+		} catch (TestException e) {
+			Log.e(TAG,Log.getStackTraceString(e));
+		}
+
+	}*/
+
+	/**
+	 * With this method we can check the Registration validation scenario .
+	 * 
+	 * @throws TestException
+	 */
+
+	/*@Smoke
+	public void testRegististrationValidation() throws TestException {
+
+		try {
+			Log.i(TAG, "testRegististrationValidation---------Start");
+			// creating object of the testclass RegisterValidationTestCase
+			registrationValid = new RegisterValidationTest(soloMain);
+			registrationValid.testRegisterValidation(getInstrumentation());
+			Log.i(TAG, "testRegististrationValidation---------End");
+
+		} catch (TestException e) {
+			Log.e(TAG,Log.getStackTraceString(e));
+
+		}
+
+	}*/
 
 	/**
 	 * This test method will call the testBrowseVerification().It will execute
@@ -186,7 +188,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 * 
 	 */
 
-	@Smoke
+	/*@Smoke
 	public void testXBrowseVerification() throws TestException {
 
 		try {
@@ -202,14 +204,14 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		}
 
-	}
+	}*/
 
 	/**
 	 * This test method will call the testBrowseValidation() .It will check the
 	 * Browse Validation scenario.
 	 */
 
-	@Smoke
+	/*@Smoke
 	public void testBrowseValidation() throws TestException {
 
 		try {
@@ -224,7 +226,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		}
 
-	}
+	}*/
 
 	/**
 	 * 
@@ -232,7 +234,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 * scenario for specialoffers
 	 */
 
-	public void testSpecialOffers() throws TestException {
+	/*public void testSpecialOffers() throws TestException {
 
 		try {
 			Log.i(TAG, "testSpecialOffers---------Start");
@@ -245,7 +247,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		}
 
-	}
+	}*/
 	
 	/**
 	 * 
@@ -253,7 +255,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 * scenario LongPause
 	 */
 	
-	public void testWLongPause() throws TestException {
+	/*public void testWLongPause() throws TestException {
 
 		try {
 			Log.i(TAG, "testSpecialOffers---------Start");
@@ -267,9 +269,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		}
 
-	}
-
-	
+	}*/
 	
 	/**
 	 * 
@@ -277,7 +277,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 * scenario LongPause
 	 */
 	
-	public void testXFailure() throws TestException {
+	/*public void testXFailure() throws TestException {
 
 		try {
 			Log.i(TAG, "testSpecialOffers---------Start");
@@ -291,12 +291,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		}
 
-	}
-
-	
-	
-	
-	
+	}*/
 	
 	/**
 	 * Once the testcases executed completely. This method will be called and
