@@ -35,7 +35,8 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.nativeapp.functional.test.core.Constants;
+import com.photon.phresco.uiconstants.Constants;
+import com.photon.phresco.uiconstants.UserInfoConstants;
 
 public class RegistrationVerificationTest extends TestCase {
 
@@ -46,6 +47,7 @@ public class RegistrationVerificationTest extends TestCase {
 	private EditText emailField, passwordField, confPassField, firstNameField,
 			lastNameField;
 
+	private  UserInfoConstants info;
 	public RegistrationVerificationTest(Solo soloRegister) {
 		this.soloRegister = soloRegister;
 	}
@@ -59,7 +61,8 @@ public class RegistrationVerificationTest extends TestCase {
 		try {
 
 			Log.i(TAG, "------It is testRegisterScenario-----------");
-
+			info = new UserInfoConstants();
+			info.parser(instrumentation);
 			activityName = soloRegister.getCurrentActivity().getClass()
 					.getSimpleName();
 
@@ -122,7 +125,7 @@ public class RegistrationVerificationTest extends TestCase {
 					soloRegister.clickOnView(firstNameField);
 					soloRegister.clearEditText(firstNameField);
 					soloRegister
-							.enterText(firstNameField, Constants.FIRST_NAME);
+							.enterText(firstNameField,info.FIRSTNAME);
 					soloRegister.goBack();
 					break;
 				} else {
@@ -134,7 +137,7 @@ public class RegistrationVerificationTest extends TestCase {
 			lastNameField = (EditText) soloRegister.getView(R.id.txt_lastName);
 			soloRegister.clickOnView(lastNameField);
 			soloRegister.clearEditText(lastNameField);
-			soloRegister.enterText(lastNameField, Constants.LAST_NAME);
+			soloRegister.enterText(lastNameField,info.LASTNAME);
 			soloRegister.goBack();
 
 			// clears the text at first Editfield
@@ -143,7 +146,7 @@ public class RegistrationVerificationTest extends TestCase {
 			soloRegister.clearEditText(emailField);
 			// soloRegister.waitForActivity("SplashActivity", 2000);
 			// it will type the text at first field which i give in method
-			soloRegister.enterText(emailField, Constants.EMAIL_ID);
+			soloRegister.enterText(emailField,info.EMAIL);
 			// soloRegister.sleep(1000);
 			soloRegister.goBack();
 			passwordField = (EditText) soloRegister.getView(R.id.txt_password);
@@ -159,7 +162,7 @@ public class RegistrationVerificationTest extends TestCase {
 								.setTransformationMethod(PasswordTransformationMethod
 										.getInstance());
 						passwordField.setText("");
-						passwordField.setText(Constants.PASSWORD);
+						passwordField.setText(info.PASSWORD);
 
 					}
 				});
@@ -184,7 +187,7 @@ public class RegistrationVerificationTest extends TestCase {
 								.setTransformationMethod(PasswordTransformationMethod
 										.getInstance());
 						confPassField.setText("");
-						confPassField.setText(Constants.CONFIRM_PASSWORD);
+						confPassField.setText(info.PASSWORD);
 
 					}
 				});

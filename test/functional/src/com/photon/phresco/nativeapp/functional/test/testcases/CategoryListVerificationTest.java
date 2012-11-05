@@ -26,14 +26,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import junit.framework.TestCase;
+import android.app.Instrumentation;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.photon.phresco.nativeapp.R;
+
 import com.jayway.android.robotium.solo.Solo;
-import com.photon.phresco.nativeapp.functional.test.core.Constants;
+import com.photon.phresco.nativeapp.R;
+import com.photon.phresco.uiconstants.Data;
+import com.photon.phresco.uiconstants.UserInfoConstants;
 
 
 /**
@@ -48,6 +51,8 @@ public class CategoryListVerificationTest extends TestCase {
 
 	private Solo soloBrowse;
 	private String activityName;
+	private Data data;
+	private  UserInfoConstants info;
 	private ImageView backButton, addtocartButton, updatecartButton, viewmycartButton, checkoutButton, browseButton,
 			submitorderButton, reviewOrderButton;
 	private EditText firstName, address1, cityName, zipcode, phoneNumber, billingFirst, billingCompany,
@@ -66,13 +71,16 @@ public class CategoryListVerificationTest extends TestCase {
 	 * @throws TestException
 	 *
 	 */
-	public void testBrowseVerification() throws TestException {
+	public void testBrowseVerification(Instrumentation instrumentation) throws TestException {
 
 		try {
 			// click on Browse button
 			// soloBrowse.clickOnImageButton(1);
 			Log.i(TAG, "------It is testBrowseVerification()-----------");
-
+			data =new Data();
+            data.parser1(instrumentation);
+            info = new UserInfoConstants();
+            info.parser(instrumentation);
 			this.activityName = soloBrowse.getCurrentActivity().getClass().getSimpleName();
 
 			if (this.activityName.equalsIgnoreCase("MainActivity")) {
@@ -210,7 +218,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(firstName);
 			soloBrowse.clearEditText(firstName);
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
-			soloBrowse.enterText(firstName, Constants.DELIVERY_FIRSTNAME);
+			soloBrowse.enterText(firstName, info.DELIVERY_FIRSTNAME);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("MainActivity", 2000);
 
@@ -219,7 +227,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(address1);
 			soloBrowse.clearEditText(address1);
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
-			soloBrowse.enterText(address1, Constants.DELIVERY_ADDRESS1);
+			soloBrowse.enterText(address1, info.DELIVERY_ADDRESS1);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
 
@@ -228,7 +236,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(cityName);
 			soloBrowse.clearEditText(cityName);
 			soloBrowse.waitForActivity("SplashActivity", 1000);
-			soloBrowse.enterText(cityName, Constants.DELIVERY_CITYNAME);
+			soloBrowse.enterText(cityName, info.DELIVERY_CITYNAME);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("CheckOutActivity", 2000);
 
@@ -248,7 +256,7 @@ public class CategoryListVerificationTest extends TestCase {
 			zipcode = (EditText) soloBrowse.getView(R.id.delivery_zipcode);
 			soloBrowse.clickOnView(zipcode);
 			soloBrowse.clearEditText(zipcode);
-			soloBrowse.enterText(zipcode, Constants.DELIVERY_ZIPCODE);
+			soloBrowse.enterText(zipcode, info.DELIVERY_ZIPCODE);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
 
@@ -256,7 +264,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(phoneNumber);
 			soloBrowse.clearEditText(phoneNumber);
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
-			soloBrowse.enterText(phoneNumber, Constants.DELIVERY_PHONENUMBER);
+			soloBrowse.enterText(phoneNumber, info.DELIVERY_PHONENUMBER);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
 
@@ -272,20 +280,20 @@ public class CategoryListVerificationTest extends TestCase {
 			billingFirst = (EditText) soloBrowse.getView(R.id.billing_first_name);
 			soloBrowse.clickOnView(billingFirst);
 			soloBrowse.clearEditText(billingFirst);
-			soloBrowse.enterText(billingFirst, Constants.BILL_FIRSTNAME);
+			soloBrowse.enterText(billingFirst, info.BILL_FIRSTNAME);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("MyCartActivity", 1000);
 
 			billingLast = (EditText) soloBrowse.getView(R.id.billing_last_name);
 			soloBrowse.clickOnView(billingLast);
 			soloBrowse.clearEditText(billingLast);
-			soloBrowse.enterText(billingLast,Constants.BILL_LASTNAME);
+			soloBrowse.enterText(billingLast,info.BILL_LASTNAME);
 			soloBrowse.goBack();
 
 			billingCompany = (EditText) soloBrowse.getView(R.id.billing_company);
 			soloBrowse.clickOnView(billingCompany);
 			soloBrowse.clearEditText(billingCompany);
-			soloBrowse.enterText(billingCompany, Constants.BILL_COMPANY);
+			soloBrowse.enterText(billingCompany, info.BILL_COMPANY);
 			soloBrowse.goBack();
 
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
@@ -293,20 +301,20 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
 			soloBrowse.clickOnView(billingAddress1);
 			soloBrowse.clearEditText(billingAddress1);
-			soloBrowse.enterText(billingAddress1, Constants.BILL_ADDRESS1);
+			soloBrowse.enterText(billingAddress1, info.BILL_ADDRESS1);
 			soloBrowse.goBack();
 
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
 			billingCity = (EditText) soloBrowse.getView(R.id.billing_city);
 			soloBrowse.clickOnView(billingCity);
 			soloBrowse.clearEditText(billingCity);
-			soloBrowse.enterText(billingCity, Constants.BILL_CITY);
+			soloBrowse.enterText(billingCity, info.BILL_CITY);
 			soloBrowse.goBack();
 
 			billingZip = (EditText) soloBrowse.getView(R.id.billing_zipcode);
 			soloBrowse.clickOnView(billingZip);
 			soloBrowse.clearEditText(billingZip);
-			soloBrowse.enterText(billingZip, Constants.BILL_ZIP);
+			soloBrowse.enterText(billingZip, info.BILL_ZIP);
 			soloBrowse.goBack();
 
 			soloBrowse.scrollDown();

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+<phresco>
+    
+<text1>Confirm password must match with password</text1>
+<text2>Invalid Email address</text2>
+<text3>Please fill required fields</text3>
+</phresco>
+</environment>

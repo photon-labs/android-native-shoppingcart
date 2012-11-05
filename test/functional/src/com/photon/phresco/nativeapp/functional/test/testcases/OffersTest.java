@@ -35,7 +35,7 @@ import android.widget.RatingBar;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.nativeapp.functional.test.core.Constants;
+import com.photon.phresco.uiconstants.Constants;
 
 public class OffersTest extends TestCase {
 
