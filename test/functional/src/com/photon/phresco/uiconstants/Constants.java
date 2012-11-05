@@ -17,7 +17,7 @@
  * limitations under the License.
  * ###
  */
-package com.photon.phresco.nativeapp.functional.test.core;
+package com.photon.phresco.uiconstants;
 
 /*
  * this constants used in all the testcases.

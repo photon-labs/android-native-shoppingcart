@@ -47,11 +47,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	private OffersTest specialOffers;
 	private CategoryListValidationTest browseValid;
 	private LoginValidationTest loginValid;
-	private CategoryListVerificationTest browseTestCase;
-	private RegistrationVerificationTest registerTestCase;
-	private RegisterValidationTest registrationValid;
-	private LongPauseTest longPauseTest;
-	private FailureTest failureTest;
+	
 
 	private static final String TAG = "****MainTestCase****";
 
@@ -194,7 +190,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			// creating object of the class
 			browseTestCase = new CategoryListVerificationTest(soloMain);
 			// calling the test method withBrowseTestCase object
-			browseTestCase.testBrowseVerification();
+			browseTestCase.testBrowseVerification(getInstrumentation());
 			Log.i(TAG, "testBrowseVerification---------End");
 
 		} catch (TestException e) {
@@ -216,7 +212,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			Log.i(TAG, "testBrowseValidation---------Start");
 			// creating object of the class BrowseValidationTestCase
 			browseValid = new CategoryListValidationTest(soloMain);
-			browseValid.testBrowseValidation();
+			browseValid.testBrowseValidation(getInstrumentation());
 			Log.i(TAG, "testBrowseValidation---------End");
 
 		} catch (TestException e) {
@@ -293,7 +289,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 	}
 
-	
+
 	
 	
 	

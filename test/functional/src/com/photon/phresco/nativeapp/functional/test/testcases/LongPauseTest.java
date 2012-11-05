@@ -30,7 +30,6 @@ import junit.framework.TestCase;
 import android.util.Log;
 import android.view.View;
 import android.widget.GridView;
-import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;

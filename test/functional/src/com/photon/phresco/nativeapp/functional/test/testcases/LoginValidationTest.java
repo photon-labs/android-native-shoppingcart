@@ -32,10 +32,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.nativeapp.functional.test.core.Constants;
 
 import com.jayway.android.robotium.solo.Solo;
+import com.photon.phresco.nativeapp.R;
+import com.photon.phresco.uiconstants.Data;
+import com.photon.phresco.uiconstants.UserInfoConstants;
 
 public class LoginValidationTest extends TestCase {
 
@@ -44,6 +45,8 @@ public class LoginValidationTest extends TestCase {
 	private ImageView clickCancel;
 	private static final String TAG = "*****LoginValidationTestCase******";
 	private EditText passwordField;
+	private UserInfoConstants info;
+	private Data data;
 
 	public LoginValidationTest(Solo solo) {
 		this.soloLoginValid = solo;
@@ -55,7 +58,10 @@ public class LoginValidationTest extends TestCase {
 
 		try {
 			Log.i(TAG, "------It is testLoginValidation()-----------");
-
+			info = new UserInfoConstants();
+			info.parser(instrumentation);
+			data = new Data();
+			data.parser1(instrumentation);
 			activityName = soloLoginValid.getCurrentActivity().getClass()
 					.getSimpleName();
 
@@ -118,7 +124,7 @@ public class LoginValidationTest extends TestCase {
 					.getView(R.id.txt_email);
 			soloLoginValid.clearEditText(emailField);
 			// it will type the text at first field which i gave in method
-			soloLoginValid.enterText(emailField, "android@");
+			soloLoginValid.enterText(emailField,info.WRONG_EMAIL);
 			// clear the text at second Editfield
 			passwordField = (EditText) soloLoginValid
 					.getView(R.id.txt_password);
@@ -133,7 +139,7 @@ public class LoginValidationTest extends TestCase {
 								.setTransformationMethod(PasswordTransformationMethod
 										.getInstance());
 						passwordField.setText("");
-						passwordField.setText(Constants.PASSWORD);
+						passwordField.setText(info.PASSWORD);
 
 					}
 				});
@@ -150,7 +156,7 @@ public class LoginValidationTest extends TestCase {
 			soloLoginValid.waitForActivity("LoginActivity");
 			soloLoginValid.clickOnView(emailField);
 			soloLoginValid.waitForActivity("LoginActivity", 1000);
-			boolean valid = soloLoginValid.searchText("Invalid Email address!");
+			boolean valid = soloLoginValid.searchText(data.CONFIRM_LOGIN_DIALOG);
 			if (valid) {
 				assertTrue("Invalid Email address!", valid);
 			} else {

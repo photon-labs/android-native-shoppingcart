@@ -35,19 +35,21 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.nativeapp.functional.test.core.Constants;
-
+import com.photon.phresco.uiconstants.Data;
+import com.photon.phresco.uiconstants.UserInfoConstants;
 public class RegisterValidationTest extends TestCase {
 
 	private Solo soloRegisterValid;
 
 	private String activityName;
 	private ImageView homeRegisterButton, registerButton, backButton;
-	private EditText emailField, passwordField, confPassField, firstNameField,
-			lastNameField;
+	private EditText emailField, passwordField, confPassField, firstNameField,lastNameField;
 
 	public static final String TAG = "********RegisterVerification testcase*******";
-
+	private  UserInfoConstants info;
+	private Data data;
+	
+	
 	public RegisterValidationTest(Solo soloRegister) {
 		Log.i(TAG, "Enter into Constructor");
 		this.soloRegisterValid = soloRegister;
@@ -58,7 +60,10 @@ public class RegisterValidationTest extends TestCase {
 
 		try {
 			Log.i(TAG, "------It is testRegisterValidation()-----------");
-
+			info = new UserInfoConstants();
+			data =new Data();
+			data.parser1(instrumentation);
+			info.parser(instrumentation);
 			activityName = soloRegisterValid.getCurrentActivity().getClass()
 					.getSimpleName();
 
@@ -116,12 +121,10 @@ public class RegisterValidationTest extends TestCase {
 			// click on FirstName field and enter the value
 			for (int i = 0; i < 5; i++) {
 				if (soloRegisterValid.waitForText("First Name")) {
-					firstNameField = (EditText) soloRegisterValid
-							.getView(R.id.txt_fistName);
+					firstNameField = (EditText) soloRegisterValid.getView(R.id.txt_fistName);
 					soloRegisterValid.clickOnView(firstNameField);
 					soloRegisterValid.clearEditText(firstNameField);
-					soloRegisterValid.enterText(firstNameField,
-							Constants.FIRST_NAME);
+					soloRegisterValid.enterText(firstNameField,info.FIRSTNAME);
 					soloRegisterValid.goBack();
 					break;
 				} else {
@@ -130,11 +133,10 @@ public class RegisterValidationTest extends TestCase {
 
 			}
 			// click on LastName field and enter the value
-			lastNameField = (EditText) soloRegisterValid
-					.getView(R.id.txt_lastName);
+			lastNameField = (EditText) soloRegisterValid.getView(R.id.txt_lastName);
 			soloRegisterValid.clickOnView(lastNameField);
 			soloRegisterValid.clearEditText(lastNameField);
-			soloRegisterValid.enterText(lastNameField, Constants.LAST_NAME);
+			soloRegisterValid.enterText(lastNameField,info.LASTNAME);
 			soloRegisterValid.goBack();
 
 			// clears the text at first Editfield
@@ -143,11 +145,10 @@ public class RegisterValidationTest extends TestCase {
 			soloRegisterValid.clearEditText(emailField);
 			// soloRegister.waitForActivity("SplashActivity", 2000);
 			// it will type the text at first field which i give in method
-			soloRegisterValid.enterText(emailField, Constants.EMAIL_ID);
+			soloRegisterValid.enterText(emailField, info.EMAIL);
 			// soloRegister.sleep(1000);
 			soloRegisterValid.goBack();
-			passwordField = (EditText) soloRegisterValid
-					.getView(R.id.txt_password);
+			passwordField = (EditText) soloRegisterValid.getView(R.id.txt_password);
 			// click the password field based on EditText view object
 
 			if (instrumentation != null) {
@@ -156,11 +157,9 @@ public class RegisterValidationTest extends TestCase {
 					@Override
 					public void run() {
 
-						passwordField
-								.setTransformationMethod(PasswordTransformationMethod
-										.getInstance());
+						passwordField.setTransformationMethod(PasswordTransformationMethod.getInstance());
 						passwordField.setText("");
-						passwordField.setText(Constants.CONFIRM_PASSWORD);
+						passwordField.setText(info.PASSWORD);
 
 					}
 				});
@@ -170,8 +169,7 @@ public class RegisterValidationTest extends TestCase {
 
 			soloRegisterValid.sleep(1000);
 			soloRegisterValid.goBack();
-			confPassField = (EditText) soloRegisterValid
-					.getView(R.id.txt_confirm_password);
+			confPassField = (EditText) soloRegisterValid.getView(R.id.txt_confirm_password);
 
 			// click the password field based on EditText view object
 
@@ -182,10 +180,9 @@ public class RegisterValidationTest extends TestCase {
 					public void run() {
 
 						confPassField
-								.setTransformationMethod(PasswordTransformationMethod
-										.getInstance());
+								.setTransformationMethod(PasswordTransformationMethod.getInstance());
 						confPassField.setText("");
-						confPassField.setText(Constants.WRONNG_PASSWORD);
+						confPassField.setText(info.WRONG_PASSWORD);
 
 					}
 				});
@@ -202,18 +199,15 @@ public class RegisterValidationTest extends TestCase {
 			soloRegisterValid.clickOnView(registerButton);
 			for (int i = 0; i < 5; i++) {
 
-				if (soloRegisterValid
-						.searchText(Constants.CONFIRM_PASSWORD_DIALOG)) {
+				if (soloRegisterValid.searchText(data.CONFIRM_PASSWORD_DIALOG)) {
 					soloRegisterValid.clickOnView(confPassField);
 					soloRegisterValid.sleep(1000);
-					backButton = (ImageView) soloRegisterValid
-							.getView(R.id.back_btn);
+					backButton = (ImageView) soloRegisterValid.getView(R.id.back_btn);
 					soloRegisterValid.clickOnView(backButton);
 
 					break;
 				} else {
-					soloRegisterValid.waitForActivity("CustomDialogActivity",
-							1000);
+					soloRegisterValid.waitForActivity("CustomDialogActivity",1000);
 				}
 
 			}

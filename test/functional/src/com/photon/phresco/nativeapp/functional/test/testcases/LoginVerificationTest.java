@@ -35,7 +35,8 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.nativeapp.functional.test.core.Constants;
+import com.photon.phresco.uiconstants.Constants;
+import com.photon.phresco.uiconstants.UserInfoConstants;
 
 /**
  * @author pradeep_si This testcase is for clicking on LoginImage button in
@@ -53,7 +54,7 @@ public class LoginVerificationTest extends TestCase {
 	private ImageView homeLoginButton, loginButton;
 	private EditText passwordField, emailField;
 	private static final String TAG = "LoginTestCase***";
-
+    private UserInfoConstants info;
 	public LoginVerificationTest(Solo solo) {
 		this.soloLogin = solo;
 
@@ -73,7 +74,8 @@ public class LoginVerificationTest extends TestCase {
 
 		try {
 			Log.i(TAG, "------It is testLoginVerification()-----------");
-
+			info = new UserInfoConstants();
+			info.parser(instrumentation);
 			activityName = soloLogin.getCurrentActivity().getClass()
 					.getSimpleName();
 
@@ -135,7 +137,7 @@ public class LoginVerificationTest extends TestCase {
 			soloLogin.clickOnView(emailField);
 			soloLogin.clearEditText(emailField);
 			// it will type the text at first field which i gave in method
-			soloLogin.enterText(emailField, Constants.EMAIL_ID);
+			soloLogin.enterText(emailField,info.EMAIL);
 			soloLogin.goBack();
 			// clear the text at second Editfield
 			passwordField = (EditText) soloLogin.getView(R.id.txt_password);
@@ -150,7 +152,7 @@ public class LoginVerificationTest extends TestCase {
 								.setTransformationMethod(PasswordTransformationMethod
 										.getInstance());
 						passwordField.setText("");
-						passwordField.setText(Constants.PASSWORD);
+						passwordField.setText(info.PASSWORD);
 
 					}
 				});

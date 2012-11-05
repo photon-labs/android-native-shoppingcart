@@ -26,13 +26,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import junit.framework.TestCase;
+import android.app.Instrumentation;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.photon.phresco.nativeapp.R;
+
 import com.jayway.android.robotium.solo.Solo;
+import com.photon.phresco.nativeapp.R;
+import com.photon.phresco.uiconstants.Data;
 
 public class CategoryListValidationTest extends TestCase {
 
@@ -43,18 +46,20 @@ public class CategoryListValidationTest extends TestCase {
 	private ImageView addtocartButton, updatecartButton, viewmycartButton, checkoutButton, browseButton,reviewOrderButton, orderComments;
 	private TextView customerInfo, deliveryInfo, billingInfo, paymentMethod;
 	private EditText quantityValue;
+	private Data data;
 
 	public CategoryListValidationTest(Solo soloBrowseValid) {
 		this.soloBrowseValid = soloBrowseValid;
 	}
 
-	public void testBrowseValidation() throws TestException {
+	public void testBrowseValidation(Instrumentation instrumentation) throws TestException {
 
 		try {
 			// click on Browse button
 			// soloBrowse.clickOnImageButton(1);
 			Log.i(TAG, "------It is testBrowseValidation-----------");
-
+            data =new Data();
+            data.parser1(instrumentation);
 			activityName = soloBrowseValid.getCurrentActivity().getClass().getSimpleName();
 
 			if (activityName.equalsIgnoreCase("MainActivity")) {
@@ -98,6 +103,7 @@ public class CategoryListValidationTest extends TestCase {
 				throw new TestException(TAG + soloBrowseValid.getCurrentActivity().getClass().getSimpleName()
 						+ "failed");
 			}
+			
 			// soloBrowse.waitForActivity("HomeActivity", 60000);
 			Log.i(TAG, "*** clicking on Browse button*****");
 			browseButton = (ImageView) soloBrowseValid.getView(R.id.home_browse_btn);
@@ -204,7 +210,7 @@ public class CategoryListValidationTest extends TestCase {
 			soloBrowseValid.clickOnView(orderComments);
 			reviewOrderButton = (ImageView) soloBrowseValid.getView(R.id.review_order_btn);
 			soloBrowseValid.clickOnView(reviewOrderButton);
-			if (soloBrowseValid.searchText("Please fill required fields")) {
+			if (soloBrowseValid.searchText(data.CONFIRM_CATEGORY_DIALOG)) {
 				soloBrowseValid.sleep(1000);
 			} else {
 				throw new TestException(soloBrowseValid.getCurrentActivity().getClass().getSimpleName() + TAG
