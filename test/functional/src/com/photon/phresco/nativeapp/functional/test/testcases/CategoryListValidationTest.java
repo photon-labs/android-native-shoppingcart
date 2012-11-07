@@ -35,7 +35,7 @@ import android.widget.TextView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.uiconstants.Data;
+import com.photon.phresco.nativeapp.functional.test.core.*;
 
 public class CategoryListValidationTest extends TestCase {
 
@@ -59,7 +59,7 @@ public class CategoryListValidationTest extends TestCase {
 			// soloBrowse.clickOnImageButton(1);
 			Log.i(TAG, "------It is testBrowseValidation-----------");
             data =new Data();
-            data.parser1(instrumentation);
+            data.parser(instrumentation.getContext());
 			activityName = soloBrowseValid.getCurrentActivity().getClass().getSimpleName();
 
 			if (activityName.equalsIgnoreCase("MainActivity")) {

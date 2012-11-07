@@ -35,8 +35,8 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.uiconstants.Data;
-import com.photon.phresco.uiconstants.UserInfoConstants;
+import com.photon.phresco.nativeapp.functional.test.core.Data;
+import com.photon.phresco.nativeapp.functional.test.core.UserInfoConstants;
 
 public class LoginValidationTest extends TestCase {
 
@@ -59,9 +59,9 @@ public class LoginValidationTest extends TestCase {
 		try {
 			Log.i(TAG, "------It is testLoginValidation()-----------");
 			info = new UserInfoConstants();
-			info.parser(instrumentation);
+			info.parser(instrumentation.getContext());
 			data = new Data();
-			data.parser1(instrumentation);
+			data.parser(instrumentation.getContext());
 			activityName = soloLoginValid.getCurrentActivity().getClass()
 					.getSimpleName();
 
