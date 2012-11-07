@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.photon.phresco.functional</groupId>
-    <artifactId>PHR_Eshop</artifactId>
+    <artifactId>PHR_Android_native_eshop</artifactId>
     <packaging>apk</packaging>
-    <name>PHR_Eshop</name>
+    <name>PHR_Android_native_eshop</name>
     <version>1.0.0</version>
     <build>
         <sourceDirectory>src</sourceDirectory>
@@ -12,7 +12,7 @@
             <plugin>
                 <groupId>com.photon.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <version>1.2.2.1002</version>
+                <version>1.2.4.1000</version>
                 <extensions>true</extensions>
                 <configuration>
                     <run>
@@ -52,8 +52,22 @@
             <artifactId>junit</artifactId>
             <version>4.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.photon.phresco</groupId>
+            <artifactId>PHR_Android_native_eshop</artifactId>
+            <version>1.0.0</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.photon.phresco</groupId>
+            <artifactId>PHR_Android_native_eshop</artifactId>
+            <version>1.0.0</version>
+            <type>apk</type>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <properties>
-        <android.version>2.3.3</android.version>
+        <android.version>4.0.3</android.version>
     </properties>
 </project>

@@ -35,8 +35,7 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.uiconstants.Constants;
-import com.photon.phresco.uiconstants.UserInfoConstants;
+import com.photon.phresco.nativeapp.functional.test.core.*;
 
 /**
  * @author pradeep_si This testcase is for clicking on LoginImage button in
@@ -75,7 +74,8 @@ public class LoginVerificationTest extends TestCase {
 		try {
 			Log.i(TAG, "------It is testLoginVerification()-----------");
 			info = new UserInfoConstants();
-			info.parser(instrumentation);
+
+			info.parser(instrumentation.getContext());
 			activityName = soloLogin.getCurrentActivity().getClass()
 					.getSimpleName();
 

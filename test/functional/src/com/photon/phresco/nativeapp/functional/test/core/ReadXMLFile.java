@@ -1,4 +1,4 @@
-package com.photon.phresco.uiconstants;
+package com.photon.phresco.nativeapp.functional.test.core;
 
 import java.io.InputStream;
 
@@ -53,8 +53,7 @@ public class ReadXMLFile {
 
 	public String getValue(String elementName) {
 
-		NodeList nlList = eElement.getElementsByTagName(elementName).item(0)
-				.getChildNodes();
+		NodeList nlList = eElement.getElementsByTagName(elementName).item(0).getChildNodes();
 		Node nValue = (Node) nlList.item(0);
 		if (nValue.getNodeValue() == null) {
 

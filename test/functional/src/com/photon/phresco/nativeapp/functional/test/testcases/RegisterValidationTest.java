@@ -35,8 +35,7 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.uiconstants.Data;
-import com.photon.phresco.uiconstants.UserInfoConstants;
+import com.photon.phresco.nativeapp.functional.test.core.*;
 public class RegisterValidationTest extends TestCase {
 
 	private Solo soloRegisterValid;
@@ -62,8 +61,8 @@ public class RegisterValidationTest extends TestCase {
 			Log.i(TAG, "------It is testRegisterValidation()-----------");
 			info = new UserInfoConstants();
 			data =new Data();
-			data.parser1(instrumentation);
-			info.parser(instrumentation);
+			data.parser(instrumentation.getContext());
+			info.parser(instrumentation.getContext());
 			activityName = soloRegisterValid.getCurrentActivity().getClass()
 					.getSimpleName();
 

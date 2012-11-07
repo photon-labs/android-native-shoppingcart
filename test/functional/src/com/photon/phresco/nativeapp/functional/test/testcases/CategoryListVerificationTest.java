@@ -35,8 +35,7 @@ import android.widget.TextView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.uiconstants.Data;
-import com.photon.phresco.uiconstants.UserInfoConstants;
+import com.photon.phresco.nativeapp.functional.test.core.*;
 
 
 /**
@@ -78,9 +77,10 @@ public class CategoryListVerificationTest extends TestCase {
 			// soloBrowse.clickOnImageButton(1);
 			Log.i(TAG, "------It is testBrowseVerification()-----------");
 			data =new Data();
-            data.parser1(instrumentation);
+            data.parser(instrumentation.getContext());
             info = new UserInfoConstants();
-            info.parser(instrumentation);
+//            info.parser(instrumentation);
+            info.parser(instrumentation.getContext());
 			this.activityName = soloBrowse.getCurrentActivity().getClass().getSimpleName();
 
 			if (this.activityName.equalsIgnoreCase("MainActivity")) {
@@ -214,7 +214,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(customerInfo);
 			soloBrowse.waitForActivity("CheckOutActivity", 2000);
 
-			firstName = (EditText) soloBrowse.getView(R.id.delivery_first_name);
+			/*firstName = (EditText) soloBrowse.getView(R.id.delivery_first_name);
 			soloBrowse.clickOnView(firstName);
 			soloBrowse.clearEditText(firstName);
 			soloBrowse.waitForActivity("CheckOutActivity", 1000);
@@ -240,18 +240,18 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("CheckOutActivity", 2000);
 
-			/*
+			
 			 * soloBrowse.pressSpinnerItem(0, 2);
 			 * soloBrowse.waitForActivity("CheckOutActivity", 4000);
 			 * soloBrowse.pressSpinnerItem(1, 0);
-			 */
+			 
 
-			/*
+			
 			 * deliveryState = (Spinner)
 			 * soloBrowse.getView(R.id.delivery_state);
 			 * soloBrowse.clickOnView(deliveryState); soloBrowse.sleep(1000);
 			 * soloBrowse.clickInList(3); soloBrowse.sleep(1000);
-			 */
+			 
 
 			zipcode = (EditText) soloBrowse.getView(R.id.delivery_zipcode);
 			soloBrowse.clickOnView(zipcode);
@@ -315,7 +315,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(billingZip);
 			soloBrowse.clearEditText(billingZip);
 			soloBrowse.enterText(billingZip, info.BILL_ZIP);
-			soloBrowse.goBack();
+			soloBrowse.goBack();*/
 
 			soloBrowse.scrollDown();
 			soloBrowse.sleep(1000);
