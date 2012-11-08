@@ -46,7 +46,7 @@ public class CategoryListValidationTest extends TestCase {
 	private ImageView addtocartButton, updatecartButton, viewmycartButton, checkoutButton, browseButton,reviewOrderButton, orderComments;
 	private TextView customerInfo, deliveryInfo, billingInfo, paymentMethod;
 	private EditText quantityValue;
-	private Data data;
+	private AndroidNativeData data;
 
 	public CategoryListValidationTest(Solo soloBrowseValid) {
 		this.soloBrowseValid = soloBrowseValid;
@@ -58,7 +58,7 @@ public class CategoryListValidationTest extends TestCase {
 			// click on Browse button
 			// soloBrowse.clickOnImageButton(1);
 			Log.i(TAG, "------It is testBrowseValidation-----------");
-            data =new Data();
+            data =new AndroidNativeData();
             data.parser(instrumentation.getContext());
 			activityName = soloBrowseValid.getCurrentActivity().getClass().getSimpleName();
 

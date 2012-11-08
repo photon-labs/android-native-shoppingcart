@@ -46,7 +46,7 @@ public class RegisterValidationTest extends TestCase {
 
 	public static final String TAG = "********RegisterVerification testcase*******";
 	private  UserInfoConstants info;
-	private Data data;
+	private AndroidNativeData data;
 	
 	
 	public RegisterValidationTest(Solo soloRegister) {
@@ -60,7 +60,7 @@ public class RegisterValidationTest extends TestCase {
 		try {
 			Log.i(TAG, "------It is testRegisterValidation()-----------");
 			info = new UserInfoConstants();
-			data =new Data();
+			data =new AndroidNativeData();
 			data.parser(instrumentation.getContext());
 			info.parser(instrumentation.getContext());
 			activityName = soloRegisterValid.getCurrentActivity().getClass()
@@ -123,7 +123,7 @@ public class RegisterValidationTest extends TestCase {
 					firstNameField = (EditText) soloRegisterValid.getView(R.id.txt_fistName);
 					soloRegisterValid.clickOnView(firstNameField);
 					soloRegisterValid.clearEditText(firstNameField);
-					soloRegisterValid.enterText(firstNameField,info.FIRSTNAME);
+					soloRegisterValid.enterText(firstNameField,data.FIRSTNAME);
 					soloRegisterValid.goBack();
 					break;
 				} else {
@@ -135,7 +135,7 @@ public class RegisterValidationTest extends TestCase {
 			lastNameField = (EditText) soloRegisterValid.getView(R.id.txt_lastName);
 			soloRegisterValid.clickOnView(lastNameField);
 			soloRegisterValid.clearEditText(lastNameField);
-			soloRegisterValid.enterText(lastNameField,info.LASTNAME);
+			soloRegisterValid.enterText(lastNameField,data.LASTNAME);
 			soloRegisterValid.goBack();
 
 			// clears the text at first Editfield
@@ -144,7 +144,7 @@ public class RegisterValidationTest extends TestCase {
 			soloRegisterValid.clearEditText(emailField);
 			// soloRegister.waitForActivity("SplashActivity", 2000);
 			// it will type the text at first field which i give in method
-			soloRegisterValid.enterText(emailField, info.EMAIL);
+			soloRegisterValid.enterText(emailField, data.EMAIL);
 			// soloRegister.sleep(1000);
 			soloRegisterValid.goBack();
 			passwordField = (EditText) soloRegisterValid.getView(R.id.txt_password);
@@ -181,7 +181,7 @@ public class RegisterValidationTest extends TestCase {
 						confPassField
 								.setTransformationMethod(PasswordTransformationMethod.getInstance());
 						confPassField.setText("");
-						confPassField.setText(info.WRONG_PASSWORD);
+						confPassField.setText(data.WRONG_PASSWORD);
 
 					}
 				});

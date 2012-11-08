@@ -54,6 +54,7 @@ public class LoginVerificationTest extends TestCase {
 	private EditText passwordField, emailField;
 	private static final String TAG = "LoginTestCase***";
     private UserInfoConstants info;
+    private AndroidNativeData data;
 	public LoginVerificationTest(Solo solo) {
 		this.soloLogin = solo;
 
@@ -74,8 +75,9 @@ public class LoginVerificationTest extends TestCase {
 		try {
 			Log.i(TAG, "------It is testLoginVerification()-----------");
 			info = new UserInfoConstants();
-
-			info.parser(instrumentation.getContext());
+            info.parser(instrumentation.getContext());
+            data = new AndroidNativeData();
+            data.parser(instrumentation.getContext());
 			activityName = soloLogin.getCurrentActivity().getClass()
 					.getSimpleName();
 
@@ -137,7 +139,7 @@ public class LoginVerificationTest extends TestCase {
 			soloLogin.clickOnView(emailField);
 			soloLogin.clearEditText(emailField);
 			// it will type the text at first field which i gave in method
-			soloLogin.enterText(emailField,info.EMAIL);
+			soloLogin.enterText(emailField,data.EMAIL);
 			soloLogin.goBack();
 			// clear the text at second Editfield
 			passwordField = (EditText) soloLogin.getView(R.id.txt_password);
@@ -168,13 +170,13 @@ public class LoginVerificationTest extends TestCase {
 			// soloLogin.waitForText("Login Successfully");
 
 			for (int i = 0; i < 3; i++) {
-				if (soloLogin.searchText(Constants.MESSAGE_LOGIN_SUCCESS)) {
+				if (soloLogin.searchText(data.MESSAGE_LOGIN_SUCCESS)) {
 					dialogBox = soloLogin.getView(R.id.btn_dialog_ok);
 					soloLogin.clickOnView(dialogBox);
 					soloLogin.waitForActivity("HomeActivity");
 					break;
 				} else {
-					if (soloLogin.searchText(Constants.MESSAGE_LOGIN_FAIL)) {
+					if (soloLogin.searchText(data.MESSAGE_LOGIN_FAIL)) {
 						soloLogin.clickOnView(dialogBox);
 						soloLogin.waitForActivity("HomeActivity");
 						break;

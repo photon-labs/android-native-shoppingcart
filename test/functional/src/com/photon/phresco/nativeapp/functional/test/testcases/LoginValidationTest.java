@@ -35,7 +35,7 @@ import android.widget.ImageView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.photon.phresco.nativeapp.R;
-import com.photon.phresco.nativeapp.functional.test.core.Data;
+import com.photon.phresco.nativeapp.functional.test.core.AndroidNativeData;
 import com.photon.phresco.nativeapp.functional.test.core.UserInfoConstants;
 
 public class LoginValidationTest extends TestCase {
@@ -46,7 +46,7 @@ public class LoginValidationTest extends TestCase {
 	private static final String TAG = "*****LoginValidationTestCase******";
 	private EditText passwordField;
 	private UserInfoConstants info;
-	private Data data;
+	private AndroidNativeData data;
 
 	public LoginValidationTest(Solo solo) {
 		this.soloLoginValid = solo;
@@ -60,7 +60,7 @@ public class LoginValidationTest extends TestCase {
 			Log.i(TAG, "------It is testLoginValidation()-----------");
 			info = new UserInfoConstants();
 			info.parser(instrumentation.getContext());
-			data = new Data();
+			data = new AndroidNativeData();
 			data.parser(instrumentation.getContext());
 			activityName = soloLoginValid.getCurrentActivity().getClass()
 					.getSimpleName();
@@ -124,7 +124,7 @@ public class LoginValidationTest extends TestCase {
 					.getView(R.id.txt_email);
 			soloLoginValid.clearEditText(emailField);
 			// it will type the text at first field which i gave in method
-			soloLoginValid.enterText(emailField,info.WRONG_EMAIL);
+			soloLoginValid.enterText(emailField,data.WRONG_EMAIL);
 			// clear the text at second Editfield
 			passwordField = (EditText) soloLoginValid
 					.getView(R.id.txt_password);

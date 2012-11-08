@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+<phresco>
+    
+        <firstName>phresco</firstName>
+		<lastName>tester</lastName>
+		<email>android.tester@photoninfotech.net</email>
+		<wrong_email>android.tester@</wrong_email>
+        <wrong_passWord>***</wrong_passWord>
+		
+		<delivary_firstName>Robotium</delivary_firstName>
+		<delivary_address1>NewYork Avenue</delivary_address1>
+		<delivary_zipcode>08054123</delivary_zipcode>
+		<delivary_phonenumber>202-346-1100</delivary_phonenumber>
+		<delivary_cityname>Arizona</delivary_cityname>
+     
+		<billing_firstname>robotium</billing_firstname>
+		<billing_lastname>monkeyrunner</billing_lastname>
+		<billing_company>TestCompany</billing_company>
+		<billing_address1>Florida</billing_address1>
+		<billing_city>California</billing_city>
+		<billing_zip>99736 2010</billing_zip>
+		
+        <confirm_password_dialog>Confirm password must match with password</confirm_password_dialog>
+        <confirm_login_dialog>Invalid Email address</confirm_login_dialog>
+        <confirm_category_dialog>Please fill required fields</confirm_category_dialog>
+        
+        <message_exist>Already exist</message_exist>
+        <message_inserted>Inserted</message_inserted>
+        <message_login_sucess>Login Success</message_login_sucess>
+        <message_login_fail>Login failed</message_login_fail>
+        <user_comments>Its Really Great product.............</user_comments>
+       
+        
+</phresco>
+</environment>
