@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import junit.framework.TestCase;
+import android.app.Instrumentation;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -47,15 +48,16 @@ public class OffersTest extends TestCase {
 	private RatingBar ratingBar;
 	private EditText userComment;
 	private ImageButton productSubmitReview, dialogOK;
-
+	private AndroidNativeData data;
 	public OffersTest(Solo specialOffers) {
 		this.specialOffers = specialOffers;
 	}
 
-	public void testSpecialOffers() throws TestException {
+	public void testSpecialOffers(Instrumentation instrumentation) throws TestException {
 		try {
 			Log.i(TAG, "------It is testSpecialOffers-----------");
-
+			 data = new AndroidNativeData();
+	         data.parser(instrumentation.getContext());
 			activityName = specialOffers.getCurrentActivity().getClass().getSimpleName();
 
 			if (activityName.equalsIgnoreCase("MainActivity")) {
@@ -160,7 +162,7 @@ public class OffersTest extends TestCase {
 					userComment = (EditText) specialOffers.getView(R.id.user_review_comment);
 					specialOffers.clickOnView(userComment);
 					specialOffers.clearEditText(userComment);
-					specialOffers.enterText(userComment, Constants.USER_COMMENTS);
+					specialOffers.enterText(userComment, data.USER_COMMENTS);
 					specialOffers.sleep(1000);
 					specialOffers.goBack();
 					Log.i(TAG, "****************Clicking on PRODUCTSUBMITREVIEW ******button****");

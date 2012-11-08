@@ -47,6 +47,7 @@ public class RegistrationVerificationTest extends TestCase {
 			lastNameField;
 
 	private  UserInfoConstants info;
+	private AndroidNativeData data;
 	public RegistrationVerificationTest(Solo soloRegister) {
 		this.soloRegister = soloRegister;
 	}
@@ -62,6 +63,8 @@ public class RegistrationVerificationTest extends TestCase {
 			Log.i(TAG, "------It is testRegisterScenario-----------");
 			info = new UserInfoConstants();
 			info.parser(instrumentation.getContext());
+			data=new AndroidNativeData();
+			data.parser(instrumentation.getContext());
 			activityName = soloRegister.getCurrentActivity().getClass()
 					.getSimpleName();
 
@@ -124,7 +127,7 @@ public class RegistrationVerificationTest extends TestCase {
 					soloRegister.clickOnView(firstNameField);
 					soloRegister.clearEditText(firstNameField);
 					soloRegister
-							.enterText(firstNameField,info.FIRSTNAME);
+							.enterText(firstNameField,data.FIRSTNAME);
 					soloRegister.goBack();
 					break;
 				} else {
@@ -136,7 +139,7 @@ public class RegistrationVerificationTest extends TestCase {
 			lastNameField = (EditText) soloRegister.getView(R.id.txt_lastName);
 			soloRegister.clickOnView(lastNameField);
 			soloRegister.clearEditText(lastNameField);
-			soloRegister.enterText(lastNameField,info.LASTNAME);
+			soloRegister.enterText(lastNameField,data.LASTNAME);
 			soloRegister.goBack();
 
 			// clears the text at first Editfield
@@ -145,7 +148,7 @@ public class RegistrationVerificationTest extends TestCase {
 			soloRegister.clearEditText(emailField);
 			// soloRegister.waitForActivity("SplashActivity", 2000);
 			// it will type the text at first field which i give in method
-			soloRegister.enterText(emailField,info.EMAIL);
+			soloRegister.enterText(emailField,data.EMAIL);
 			// soloRegister.sleep(1000);
 			soloRegister.goBack();
 			passwordField = (EditText) soloRegister.getView(R.id.txt_password);
@@ -203,7 +206,7 @@ public class RegistrationVerificationTest extends TestCase {
 			soloRegister.clickOnView(registerButton);
 			for (int i = 0; i < 5; i++) {
 				Log.i(TAG, "********Searching for dialog box*********");
-				if (soloRegister.searchText(Constants.MESSAGE_EXIST)) {
+				if (soloRegister.searchText(data.MESSAGE_EXIST)) {
 					Log.i(TAG,
 							"********Searching for Already Exist text*********");
 					dialogBoxOK = (ImageView) soloRegister
@@ -216,7 +219,7 @@ public class RegistrationVerificationTest extends TestCase {
 					// new
 					// LoginVerificationTestCase(soloRegister).testLoginScenario();
 					break;
-				} else if (soloRegister.searchText(Constants.MESSAGE_INSERTED)) {
+				} else if (soloRegister.searchText(data.MESSAGE_INSERTED)) {
 					Log.i(TAG, "********Searching for Inserted text*********");
 					dialogBoxOK = (ImageView) soloRegister
 							.getView(R.id.btn_dialog_ok);

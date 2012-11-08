@@ -47,7 +47,7 @@ public class MainActivityTest extends
 	private LoginVerificationTest loginTestCase;
 	private LoginValidationTest loginValid;
 	
-	/*
+	
 	private OffersTest specialOffers;
 	private CategoryListValidationTest browseValid;
 	private CategoryListVerificationTest browseTestCase;
@@ -55,7 +55,7 @@ public class MainActivityTest extends
 	private RegisterValidationTest registrationValid;
 	private LongPauseTest longPauseTest;
 	private FailureTest failureTest;
-	*/
+	
 
 	private static final String TAG = "****MainTestCase****";
 
@@ -149,21 +149,21 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * public void testRegististrationVerification() throws TestException {
-	 * 
-	 * try {
-	 * 
-	 * Log.i(TAG, "testRegististrationVerification---------Start"); //
-	 * RegisterTestcase object creating and passing Solo class object
-	 * registerTestCase = new RegistrationVerificationTest(soloMain); // calling
-	 * the test method with Register object
-	 * registerTestCase.testRegisterScenario(getInstrumentation()); Log.i(TAG,
-	 * "testRegististrationVerification---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e)); }
-	 * 
-	 * }
-	 */
+	  public void testRegististrationVerification() throws TestException {
+	  
+	  try {
+	  
+	  Log.i(TAG, "testRegististrationVerification---------Start"); 
+	 // RegisterTestcase object creating and passing Solo class object
+	  registerTestCase = new RegistrationVerificationTest(soloMain); // calling
+	  //the test method with Register object
+	  registerTestCase.testRegisterScenario(getInstrumentation()); Log.i(TAG,
+	  "testRegististrationVerification---------End");
+	  
+	  } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e)); }
+	  
+	  }*/
+	 
 
 	/**
 	 * With this method we can check the Registration validation scenario .
@@ -172,19 +172,19 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * @Smoke public void testRegististrationValidation() throws TestException {
-	 * 
-	 * try { Log.i(TAG, "testRegististrationValidation---------Start"); //
-	 * creating object of the testclass RegisterValidationTestCase
-	 * registrationValid = new RegisterValidationTest(soloMain);
-	 * registrationValid.testRegisterValidation(getInstrumentation());
-	 * Log.i(TAG, "testRegististrationValidation---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
-	 * 
-	 * }
-	 * 
-	 * }
+	 @Smoke public void testRegististrationValidation() throws TestException {
+	  
+	  try { Log.i(TAG, "testRegististrationValidation---------Start"); //
+	  //creating object of the testclass RegisterValidationTestCase
+	  registrationValid = new RegisterValidationTest(soloMain);
+	  registrationValid.testRegisterValidation(getInstrumentation());
+	  Log.i(TAG, "testRegististrationValidation---------End");
+	  
+	  } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }
 	 */
 
 	/**
@@ -194,19 +194,22 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * @Smoke public void testXBrowseVerification() throws TestException {
-	 * 
-	 * try { Log.i(TAG, "testBrowseVerification---------Start"); // creating
-	 * object of the class browseTestCase = new
-	 * CategoryListVerificationTest(soloMain); // calling the test method
-	 * withBrowseTestCase object browseTestCase.testBrowseVerification();
-	 * Log.i(TAG, "testBrowseVerification---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
-	 * 
-	 * }
-	 * 
-	 * }
+	  @Smoke public void testXBrowseVerification() throws TestException {
+	  
+	  try { Log.i(TAG, "testBrowseVerification---------Start"); // creating
+	  // of the class 
+	  browseTestCase = new CategoryListVerificationTest(soloMain); // calling the test method
+	 // withBrowseTestCase object 
+	  browseTestCase.testBrowseVerification(getInstrumentation());
+	 
+	  Log.i(TAG, "testBrowseVerification---------End");
+	  
+	  }catch (TestException e) { 
+		  Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }
 	 */
 
 	/**
@@ -215,19 +218,20 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * @Smoke public void testBrowseValidation() throws TestException {
-	 * 
-	 * try { Log.i(TAG, "testBrowseValidation---------Start"); // creating
-	 * object of the class BrowseValidationTestCase browseValid = new
-	 * CategoryListValidationTest(soloMain); browseValid.testBrowseValidation();
-	 * Log.i(TAG, "testBrowseValidation---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
+	  @Smoke public void testBrowseValidation() throws TestException {
+	  
+	  try { Log.i(TAG, "testBrowseValidation---------Start"); 
+	  // creating object of the classBrowseValidationTestCase 
+	  browseValid = new CategoryListValidationTest(soloMain); 
+	  browseValid.testBrowseValidation(getInstrumentation());
+	  Log.i(TAG, "testBrowseValidation---------End");
+	  
+	  } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
+	 
+	 }
+	 
+   }*/
+	 
 
 	/**
 	 * 
@@ -236,18 +240,19 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * public void testSpecialOffers() throws TestException {
-	 * 
-	 * try { Log.i(TAG, "testSpecialOffers---------Start"); specialOffers = new
-	 * OffersTest(soloMain); specialOffers.testSpecialOffers(); Log.i(TAG,
-	 * "testSpecialOffers---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
+	 public void testSpecialOffers() throws TestException {
+	  
+	 try { Log.i(TAG, "testSpecialOffers---------Start"); 
+	 specialOffers = new OffersTest(soloMain); 
+	 specialOffers.testSpecialOffers(getInstrumentation());
+	 Log.i(TAG,"testSpecialOffers---------End");
+	  
+	 } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	 
+	  }*/
+	 
 
 	/**
 	 * 
@@ -256,18 +261,19 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * public void testWLongPause() throws TestException {
-	 * 
-	 * try { Log.i(TAG, "testSpecialOffers---------Start"); longPauseTest = new
-	 * LongPauseTest(soloMain); longPauseTest.testLongPause(); Log.i(TAG,
-	 * "testSpecialOffers---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
+	  public void testWLongPause() throws TestException {
+	 
+	  try { Log.i(TAG, "testSpecialOffers---------Start"); 
+	  longPauseTest = new LongPauseTest(soloMain); 
+	  longPauseTest.testLongPause();
+	  Log.i(TAG,"testSpecialOffers---------End");
+	  
+	  } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }*/
+	 
 
 	/**
 	 * 
@@ -276,18 +282,20 @@ public class MainActivityTest extends
 	 */
 
 	/*
-	 * public void testXFailure() throws TestException {
-	 * 
-	 * try { Log.i(TAG, "testSpecialOffers---------Start"); failureTest = new
-	 * FailureTest(soloMain); failureTest.testFailure(); Log.i(TAG,
-	 * "testSpecialOffers---------End");
-	 * 
-	 * } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
+	  public void testXFailure() throws TestException {
+	  
+	  try { 
+		  Log.i(TAG, "testSpecialOffers---------Start");
+	      failureTest = new FailureTest(soloMain); 
+	      failureTest.testFailure();
+	      Log.i(TAG,"testSpecialOffers---------End");
+	  
+	  } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }*/
+	 
 
 	/**
 	 * Once the testcases executed completely. This method will be called and
