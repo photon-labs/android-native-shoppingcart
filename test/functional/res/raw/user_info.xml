@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<environment>
-	<phresco>
-		<userName>photon</userName>
-		<passWord>*****</passWord>
+<phresco>
+	<userCredentials>
+		<username>photon</username>
 		
-	</phresco>
-</environment>
+		<email>android.tester@photoninfotech.net</email>
+		<password>*****</password>
+		
+		<wrong_email>android.tester@</wrong_email>
+        <wrong_password>***</wrong_password>
+		
+	</userCredentials>
+</phresco>

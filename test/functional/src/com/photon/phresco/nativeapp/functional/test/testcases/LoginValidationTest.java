@@ -124,7 +124,7 @@ public class LoginValidationTest extends TestCase {
 					.getView(R.id.txt_email);
 			soloLoginValid.clearEditText(emailField);
 			// it will type the text at first field which i gave in method
-			soloLoginValid.enterText(emailField,data.WRONG_EMAIL);
+			soloLoginValid.enterText(emailField,info.WRONG_EMAIL);
 			// clear the text at second Editfield
 			passwordField = (EditText) soloLoginValid
 					.getView(R.id.txt_password);
@@ -156,7 +156,7 @@ public class LoginValidationTest extends TestCase {
 			soloLoginValid.waitForActivity("LoginActivity");
 			soloLoginValid.clickOnView(emailField);
 			soloLoginValid.waitForActivity("LoginActivity", 1000);
-			boolean valid = soloLoginValid.searchText(data.CONFIRM_LOGIN_DIALOG);
+			boolean valid = soloLoginValid.searchText(data.INVALID_LOGIN_MESG);
 			if (valid) {
 				assertTrue("Invalid Email address!", valid);
 			} else {

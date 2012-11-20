@@ -148,7 +148,7 @@ public class RegistrationVerificationTest extends TestCase {
 			soloRegister.clearEditText(emailField);
 			// soloRegister.waitForActivity("SplashActivity", 2000);
 			// it will type the text at first field which i give in method
-			soloRegister.enterText(emailField,data.EMAIL);
+			soloRegister.enterText(emailField,info.EMAIL);
 			// soloRegister.sleep(1000);
 			soloRegister.goBack();
 			passwordField = (EditText) soloRegister.getView(R.id.txt_password);

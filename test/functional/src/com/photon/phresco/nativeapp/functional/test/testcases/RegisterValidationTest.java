@@ -144,7 +144,7 @@ public class RegisterValidationTest extends TestCase {
 			soloRegisterValid.clearEditText(emailField);
 			// soloRegister.waitForActivity("SplashActivity", 2000);
 			// it will type the text at first field which i give in method
-			soloRegisterValid.enterText(emailField, data.EMAIL);
+			soloRegisterValid.enterText(emailField, info.EMAIL);
 			// soloRegister.sleep(1000);
 			soloRegisterValid.goBack();
 			passwordField = (EditText) soloRegisterValid.getView(R.id.txt_password);
@@ -181,7 +181,7 @@ public class RegisterValidationTest extends TestCase {
 						confPassField
 								.setTransformationMethod(PasswordTransformationMethod.getInstance());
 						confPassField.setText("");
-						confPassField.setText(data.WRONG_PASSWORD);
+						confPassField.setText(info.WRONG_PASSWORD);
 
 					}
 				});

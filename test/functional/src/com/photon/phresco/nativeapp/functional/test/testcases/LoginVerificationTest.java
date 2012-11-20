@@ -139,7 +139,7 @@ public class LoginVerificationTest extends TestCase {
 			soloLogin.clickOnView(emailField);
 			soloLogin.clearEditText(emailField);
 			// it will type the text at first field which i gave in method
-			soloLogin.enterText(emailField,data.EMAIL);
+			soloLogin.enterText(emailField,info.EMAIL);
 			soloLogin.goBack();
 			// clear the text at second Editfield
 			passwordField = (EditText) soloLogin.getView(R.id.txt_password);

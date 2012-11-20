@@ -236,7 +236,7 @@ public class CategoryListVerificationTest extends TestCase {
 			soloBrowse.clickOnView(cityName);
 			soloBrowse.clearEditText(cityName);
 			soloBrowse.waitForActivity("SplashActivity", 1000);
-			soloBrowse.enterText(cityName, data.DELIVERY_CITYNAME);
+			soloBrowse.enterText(cityName, data.DELIVERY_CITY);
 			soloBrowse.goBack();
 			soloBrowse.waitForActivity("CheckOutActivity", 2000);
 

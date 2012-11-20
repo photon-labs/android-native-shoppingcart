@@ -29,7 +29,7 @@ public class ReadXMLFile {
 					.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(inputStream);
-			NodeList nList = doc.getElementsByTagName("environment");
+			NodeList nList = doc.getElementsByTagName("phresco");
 
 			System.out.println("--------Node list-->" + nList.getLength());
 

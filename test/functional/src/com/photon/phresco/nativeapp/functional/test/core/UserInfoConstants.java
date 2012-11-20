@@ -11,8 +11,13 @@ import android.content.res.Resources;
 public class UserInfoConstants {
 	private ReadXMLFile readXml;
 
-	public String USERNAME = "userName";
-	public String PASSWORD = "passWord";
+	public String USERNAME = "username";
+	public String PASSWORD = "password";
+	public String EMAIL = "email";
+	
+	public String WRONG_EMAIL = "wrong_email";
+	public String WRONG_PASSWORD = "wrong_password";
+
 
 	public UserInfoConstants() {
 
