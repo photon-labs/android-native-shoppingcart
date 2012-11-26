@@ -25,6 +25,7 @@
  */
 package com.photon.phresco.nativeapp.eshop.core;
 
+
 /**
  * Constants that will be used through out the device application
  *
@@ -64,6 +65,7 @@ public class Constants {
 
 	private static String currentScreenResolution = "";
 	private static String webContextURL = "";
+	private static String homeURL = "";
 	private static String currency = "";
 	private static String restAPI = "";
 	private static int userId = 0;
@@ -91,6 +93,18 @@ public class Constants {
 	 */
 	public static void setWebContextURL(String webContextURL) {
 		Constants.webContextURL = webContextURL;
+	}
+	/**
+	 * @return the homeURL
+	 */
+	public static String getHomeURL() {
+		return homeURL;
+	}
+	/**
+	 * @param homeURL the homeURL to set
+	 */
+	public static void setHomeURL(String homeURL) {
+		Constants.homeURL = homeURL;
 	}
 	/**
 	 * @return the currency

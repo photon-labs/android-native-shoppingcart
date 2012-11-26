@@ -49,6 +49,7 @@ import com.photon.phresco.nativeapp.eshop.db.AppConfiguration;
 import com.photon.phresco.nativeapp.eshop.interfaces.IAsyncTaskListener;
 import com.photon.phresco.nativeapp.eshop.logger.PhrescoLogger;
 import com.photon.phresco.nativeapp.eshop.model.appconfig.AppConfig;
+import com.photon.phresco.nativeapp.eshop.net.NetworkManager;
 import com.photon.phresco.nativeapp.eshop.util.Utility;
 
 /**
@@ -77,7 +78,18 @@ public class MainActivity extends PhrescoActivity {
 			// PhrescoLogger.info(TAG + " - onCreate()********** ");
 
 			initApplicationEnvironment();
-			buildEnvData();
+//			buildEnvData();
+			readConfigXML();
+			
+			if (!NetworkManager.checkNetworkConnectivity(this)) {
+				NetworkManager.showNetworkConectivityAlert(this);
+				return;
+			} else if (!NetworkManager.checkURLStatus(Constants
+					.getWebContextURL() + Constants.getHomeURL())) {
+				NetworkManager.showServiceAlert(this);
+				return;
+			}
+			
 			screenDensity = getScreenDensity();
 			readAppConfigJSON();
 

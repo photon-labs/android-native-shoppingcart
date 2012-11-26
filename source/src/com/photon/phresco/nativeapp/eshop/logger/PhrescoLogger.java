@@ -1,6 +1,6 @@
 /*
  * ###
- * PHR_AndroidNative
+ * PHR_AndroidHybrid
  * %%
  * Copyright (C) 1999 - 2012 Photon Infotech Inc.
  * %%
@@ -35,8 +35,9 @@ import com.photon.phresco.nativeapp.eshop.core.Constants;
 
 /**
  * Base class to create the application logs
+ * 
  * @author viral_b
- *
+ * 
  */
 public class PhrescoLogger {
 

@@ -34,6 +34,9 @@
 	<string name="http_connect_error_message">Could not connect to server.. Please try again
 		later.\n\nMake sure that your device Wi-Fi is connected and the server is also running.
 	</string>
+	
+	<string name="network_error">Network is not available.. Check your network settings</string>
+	<string name="service_error">Service is not available</string>
 
 	<!-- Progress dialog messages -->
 	<string name="load_configuration">Loading configurations from server... Please wait

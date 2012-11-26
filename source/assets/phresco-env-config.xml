@@ -1,12 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><environments>
-    <environment default="true" name="Production">
-        <WebService name="Native_Eshop">
-            <port>2020</port>
-            <password/>
-            <context>eshop</context>
-            <host>172.16.17.180</host>
-            <protocol>http</protocol>
-            <username/>
-        </WebService>
-    </environment>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<environments>
 </environments>
