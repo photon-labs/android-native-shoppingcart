@@ -39,8 +39,8 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.test.AndroidTestCase;
 
-import com.photon.phresco.nativeapp.config.ConfigReader;
-import com.photon.phresco.nativeapp.config.Configuration;
+import com.photon.phresco.nativeapp.eshop.config.ConfigReader;
+import com.photon.phresco.nativeapp.eshop.config.Configuration;
 import com.photon.phresco.nativeapp.eshop.logger.PhrescoLogger;
 import com.photon.phresco.nativeapp.eshop.model.appconfig.AppConfig;
 import com.photon.phresco.nativeapp.unit.test.core.Constants;
