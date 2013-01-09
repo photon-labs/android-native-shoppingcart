@@ -90,55 +90,9 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		soloMain = new Solo(getInstrumentation(), getActivity());
 
 	}
-
-	/**
-	 * With this method we can check the Registration Verification scenario by
-	 * using testRegisterScenario().
-	 * 
-	 */
-
-	public void testRegististrationVerification() throws TestException {
-
-		try {
-
-			Log.i(TAG, "testRegististrationVerification---------Start");
-			// RegisterTestcase object creating and passing Solo class object
-			registerTestCase = new RegistrationVerificationTest(soloMain);
-			// calling the test method with Register object
-			registerTestCase.testRegisterScenario();
-			Log.i(TAG, "testRegististrationVerification---------End");
-
-		} catch (TestException e) {
-			e.printStackTrace();
-
-		}
-
-	}
-
-	/**
-	 * With this method we can check the Registration validation scenario .
-	 * 
-	 * @throws TestException
-	 */
-
-	@Smoke
-	public void testRegististrationValidation() throws TestException {
-
-		try {
-			Log.i(TAG, "testRegististrationValidation---------Start");
-			// creating object of the testclass RegisterValidationTestCase
-			registrationValid = new RegisterValidationTest(soloMain);
-			registrationValid.testRegisterValidation();
-			Log.i(TAG, "testRegististrationValidation---------End");
-
-		} catch (TestException e) {
-			e.printStackTrace();
-
-		}
-
-	}
-
-	/**
+    
+    // artf549283 : As disscussed with Arunachalam sir, all the tests except login verification & validation is commented
+    /**
 	 * This test method will execute the testLoginScenario() .It will verifies
 	 * the Login screen verification.
 	 * 
@@ -183,11 +137,62 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	}
 
 	/**
+	 * With this method we can check the Registration Verification scenario by
+	 * using testRegisterScenario().
+	 * 
+	 */
+
+     /*
+	public void testRegististrationVerification() throws TestException {
+
+		try {
+
+			Log.i(TAG, "testRegististrationVerification---------Start");
+			// RegisterTestcase object creating and passing Solo class object
+			registerTestCase = new RegistrationVerificationTest(soloMain);
+			// calling the test method with Register object
+			registerTestCase.testRegisterScenario();
+			Log.i(TAG, "testRegististrationVerification---------End");
+
+		} catch (TestException e) {
+			e.printStackTrace();
+
+		}
+
+	}*/
+
+	/**
+	 * With this method we can check the Registration validation scenario .
+	 * 
+	 * @throws TestException
+	 */
+
+     /*
+	@Smoke
+	public void testRegististrationValidation() throws TestException {
+
+		try {
+			Log.i(TAG, "testRegististrationValidation---------Start");
+			// creating object of the testclass RegisterValidationTestCase
+			registrationValid = new RegisterValidationTest(soloMain);
+			registrationValid.testRegisterValidation();
+			Log.i(TAG, "testRegististrationValidation---------End");
+
+		} catch (TestException e) {
+			e.printStackTrace();
+
+		}
+
+	}
+    */
+
+	/**
 	 * This test method will call the testBrowseVerification().It will execute
 	 * the Browse verification scenario.
 	 * 
 	 */
 
+     /*
 	@Smoke
 	public void testBrowseVerification() throws TestException {
 
@@ -205,12 +210,14 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		}
 
 	}
+    */
 
 	/**
 	 * This test method will call the testBrowseValidation() .It will check the
 	 * Browse Validation scenario.
 	 */
 
+     /*
 	@Smoke
 	public void testBrowseValidation() throws TestException {
 
@@ -227,6 +234,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		}
 
 	}
+    */
 
 	/**
 	 * 
@@ -234,6 +242,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 * scenario for specialoffers
 	 */
 
+     /*
 	public void testSpecialOffers() throws TestException {
 
 		try {
@@ -249,6 +258,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		}
 
 	}
+    */
 
 	/**
 	 * Once the testcases executed completely. This method will be called and
