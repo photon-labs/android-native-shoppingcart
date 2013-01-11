@@ -21,7 +21,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.photon.phresco.eShop</groupId>
+  <groupId>com.photon.phresco.unit</groupId>
   <artifactId>phresco-test</artifactId>
   <packaging>apk</packaging>
   <name>eShop - Test</name>

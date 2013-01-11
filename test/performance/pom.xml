@@ -21,7 +21,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.photon.phresco.eShop</groupId>
+  <groupId>com.photon.phresco.performance</groupId>
   <artifactId>eShopRobotiumPerfTest</artifactId>
   <packaging>apkperf</packaging>
   <name>eShopRobotiumPerfTest</name>
