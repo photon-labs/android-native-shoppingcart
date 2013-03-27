@@ -45,22 +45,6 @@
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
             </plugin>
-			<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>1.1</version>
-                <configuration>
-                   <verbose>false</verbose>
-                   <processStartTag>###</processStartTag>
-                   <processEndTag>###</processEndTag>
-                  <!-- <sectionDelimiter>" "</sectionDelimiter> -->
-                   <licenseName>apache_v2</licenseName>
-				   <roots>
-				   <root>source</root>
-				   <root>test</root>
-				   </roots>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
     <dependencies>
