@@ -167,24 +167,13 @@ public class LoginVerificationTest extends TestCase {
 			// soloSplash.clickOnImageButton(1);
 			// soloLogin.waitForText("Login Successfully");
 
-			for (int i = 0; i < 3; i++) {
-				if (soloLogin.searchText(data.MESSAGE_LOGIN_SUCCESS)) {
+			for (int i = 0; i < 5; i++) {
+				 {
 					dialogBox = soloLogin.getView(R.id.btn_dialog_ok);
 					soloLogin.clickOnView(dialogBox);
 					soloLogin.waitForActivity("HomeActivity");
 					break;
-				} else {
-					if (soloLogin.searchText(data.MESSAGE_LOGIN_FAIL)) {
-						soloLogin.clickOnView(dialogBox);
-						soloLogin.waitForActivity("HomeActivity");
-						break;
-					} else if (soloLogin.waitForActivity(
-							"CustomDialogActivity", 2000)) {
-						Log.i(TAG,
-								"wait for CustomDialogActivity for 2000 milliseconds");
-					}
-
-				}
+				} 
 			}
 
 		} catch (Exception e) {

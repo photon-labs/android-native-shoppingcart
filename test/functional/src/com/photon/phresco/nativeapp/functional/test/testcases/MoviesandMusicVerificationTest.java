@@ -1,3 +1,6 @@
+package com.photon.phresco.nativeapp.functional.test.testcases;
+
+
 /**
  * PHR_AndroidNative
  *
@@ -18,7 +21,6 @@
 /**
  * Author by {phresco} QA Automation Team
  */
-package com.photon.phresco.nativeapp.functional.test.testcases;
 
 import java.util.ArrayList;
 
@@ -28,6 +30,7 @@ import junit.framework.TestCase;
 import android.app.Instrumentation;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -45,7 +48,7 @@ import com.photon.phresco.nativeapp.functional.test.core.*;
  *
  *
  */
-public class CategoryListVerificationTest extends TestCase {
+public class MoviesandMusicVerificationTest extends TestCase {
 
 	private Solo soloBrowse;
 	private String activityName;
@@ -56,9 +59,9 @@ public class CategoryListVerificationTest extends TestCase {
 	private EditText firstName, address1, cityName, zipcode, phoneNumber, billingFirst, billingCompany,
 			billingAddress1, billingCity, billingZip, quantityValue, billingLast;
 	private TextView customerInfo;
-	private static final String TAG = "*******BrowseVerificationTestCase****";
+	private static final String TAG = "*******MoviesandMusicVerificationTest****";
 
-	public CategoryListVerificationTest(Solo soloTest) {
+	public MoviesandMusicVerificationTest(Solo soloTest) {
 		this.soloBrowse = soloTest;
 	}
 
@@ -69,12 +72,12 @@ public class CategoryListVerificationTest extends TestCase {
 	 * @throws TestException
 	 *
 	 */
-	public void testBrowseVerification(Instrumentation instrumentation) throws TestException {
+	public void testMoviesandMusicVerificationTest(Instrumentation instrumentation) throws TestException {
 
 		try {
 			// click on Browse button
 			// soloBrowse.clickOnImageButton(1);
-			Log.i(TAG, "------It is testBrowseVerification()-----------");
+			Log.i(TAG, "------It is testMoviesandMusicVerificationTest()-----------");
 			data =new AndroidNativeData();
             data.parser(instrumentation.getContext());
             info = new UserInfoConstants();
@@ -100,7 +103,7 @@ public class CategoryListVerificationTest extends TestCase {
 				}
 
 			} else {
-				Log.i(TAG, "------ testBrowseVerification failed-----------");
+				Log.i(TAG, "------ testMoviesandMusicVerificationTest failed-----------");
 				throw new TestException("Current Activity Failed----"
 						+ soloBrowse.getCurrentActivity().getClass().getSimpleName() + "failed");
 			}
@@ -128,29 +131,30 @@ public class CategoryListVerificationTest extends TestCase {
 			browseButton = (ImageView) soloBrowse.getView(R.id.home_browse_btn);
 			soloBrowse.clickOnView(browseButton);
 			for (int i = 0; i < 20; i++) {
-				Log.i(TAG, "**** checking for Mobile Phones item*****");
+				Log.i(TAG, "**** checking for Acer item*****");
 				this.activityName = soloBrowse.getCurrentActivity().getClass().getSimpleName();
 				Log.i(TAG, "The activity name------------>" + this.activityName);
-				if (soloBrowse.waitForText("Mobile Phones")) {
-					Log.i(TAG, "********Enter into if() condition and clicking on Mobile Phones******");
-					// click on Mobile Phones
-					soloBrowse.clickInList(3);
+				if (soloBrowse.waitForText("Movies and Music")) {
+					Log.i(TAG, "********Enter into if() condition and clicking on Acer******");
+					// click on Acer
+					soloBrowse.clickInList(7);
 					break;
 				}
-				Log.i(TAG, "*****waiting for Mobile Phones item*****");
-				soloBrowse.waitForText("Mobile Phones", 1, 2000);
+				Log.i(TAG, "*****waiting for Sony item*****");
+				soloBrowse.waitForText("Movies and Music", 1, 2000);
 			}
 
 			for (int i = 0; i < 20; i++) {
 				this.activityName = soloBrowse.getCurrentActivity().getClass().getSimpleName();
-				Log.i(TAG, "checking for ***HTC Wildfire*** in ------------>" + this.activityName);
-				if (soloBrowse.waitForText("HTC Wildfire")) {
-					Log.i(TAG, "****if() condition and clicking on ****HTC Wildfire*****Item*****");
-					soloBrowse.clickOnMenuItem("HTC Wildfire");
+				Log.i(TAG, "checking for ***Canon*** in ------------>" + this.activityName);
+				if (soloBrowse.waitForText("Canon")) {
+					Log.i(TAG, "****if() condition and clicking on ****Canon*****Item*****");
+					soloBrowse.clickInList(1);
 					break;
 				} else {
-					Log.i(TAG, "waiting for  *****HTC Wildfire**** item in ------------>" + this.activityName);
-					soloBrowse.waitForText("HTC Wildfire", 1, 2000);
+					Log.i(TAG, "waiting for  *****Canon**** item in ------------>" + this.activityName);
+					soloBrowse.waitForText("Canon", 1, 2000);
+					
 				}
 			}
 
@@ -164,8 +168,8 @@ public class CategoryListVerificationTest extends TestCase {
 			for (int i = 0; i < 30; i++) {
 				Log.i(TAG, "checking the   ****ADD TO CART***button****");
 				// if (soloBrowse.waitForView(this.addtocartButton)) {
-				if (soloBrowse.waitForText("HTC Wildfire", 1, 0, false, true)) {
-					// if (soloBrowse.waitForText("HTC Wildfire")) {
+				if (soloBrowse.waitForText("Canon", 1, 0, false, true)) {
+					// if (soloBrowse.waitForText("Apple 11.6")) {
 					Log.i(TAG, "****if() condition and clicking on ****ADD TO CART**** button*******");
 					this.addtocartButton = (ImageView) soloBrowse.getView(R.id.add_to_cart);
 					// soloBrowse.wait(20000);
@@ -174,7 +178,7 @@ public class CategoryListVerificationTest extends TestCase {
 					break;
 				} else {
 					Log.i(TAG, "Waiting for ****ADD TO CART***button****");
-					soloBrowse.waitForText("HTC Wildfire", 1, 2000);
+					soloBrowse.waitForText("Canon", 1, 2000);
 				}
 			}
 
@@ -205,7 +209,6 @@ public class CategoryListVerificationTest extends TestCase {
 
 			soloBrowse.scrollDown();
 			// click on CHECKOUT button
-			
 			checkoutButton = (ImageView) soloBrowse.getView(R.id.checkout_btn);
 			soloBrowse.clickOnView(checkoutButton);
 
