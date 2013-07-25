@@ -147,6 +147,7 @@ public class RegisterValidationTest extends TestCase {
 			soloRegisterValid.goBack();
 			passwordField = (EditText) soloRegisterValid.getView(R.id.txt_password);
 			// click the password field based on EditText view object
+			soloRegisterValid.clickOnView(passwordField);
 
 			if (instrumentation != null) {
 				instrumentation.runOnMainSync(new Runnable() {
@@ -167,6 +168,7 @@ public class RegisterValidationTest extends TestCase {
 			soloRegisterValid.sleep(1000);
 			soloRegisterValid.goBack();
 			confPassField = (EditText) soloRegisterValid.getView(R.id.txt_confirm_password);
+			soloRegisterValid.clickOnView(confPassField);
 
 			// click the password field based on EditText view object
 
@@ -194,7 +196,8 @@ public class RegisterValidationTest extends TestCase {
 			registerButton = (ImageView) soloRegisterValid
 					.getView(R.id.register_btn);
 			soloRegisterValid.clickOnView(registerButton);
-			for (int i = 0; i < 5; i++) {
+			soloRegisterValid.sleep(2000);
+			/*for (int i = 0; i < 5; i++) {
 
 				if (soloRegisterValid.searchText(data.CONFIRM_PASSWORD_DIALOG)) {
 					soloRegisterValid.clickOnView(confPassField);
@@ -208,7 +211,7 @@ public class RegisterValidationTest extends TestCase {
 				}
 
 			}
-
+*/
 		} catch (TestException e) {
 			Log.e(TAG, Log.getStackTraceString(e));
 		}

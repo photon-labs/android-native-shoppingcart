@@ -21,6 +21,8 @@
 package com.photon.phresco.nativeapp.functional.test.testcases;
 
 import android.test.ActivityInstrumentationTestCase2;
+
+
 import android.test.suitebuilder.annotation.Smoke;
 import android.util.Log;
 
@@ -53,6 +55,11 @@ public class MainActivityTest extends
 	private RegisterValidationTest registrationValid;
 	private LongPauseTest longPauseTest;
 	private FailureTest failureTest;
+	private ComputorsProductTest computer;
+	private AudioDevicesVerificationTest audiotest;
+	private CamerasVerificationTest camaras;
+	private TabletsVerificationTest tablet;
+	private MoviesandMusicVerificationTest movie;
 	
 
 	private static final String TAG = "****MainTestCase****";
@@ -146,7 +153,7 @@ public class MainActivityTest extends
 	 * 
 	 */
 
-	/*
+	
 	  public void testRegististrationVerification() throws TestException {
 	  
 	  try {
@@ -160,7 +167,7 @@ public class MainActivityTest extends
 	  
 	  } catch (TestException e) { Log.e(TAG,Log.getStackTraceString(e)); }
 	  
-	  }*/
+	  }
 	 
 
 	/**
@@ -169,7 +176,7 @@ public class MainActivityTest extends
 	 * @throws TestException
 	 */
 
-	/*
+	
 	 @Smoke public void testRegististrationValidation() throws TestException {
 	  
 	  try { Log.i(TAG, "testRegististrationValidation---------Start"); //
@@ -183,7 +190,7 @@ public class MainActivityTest extends
 	  }
 	  
 	  }
-	 */
+	
 
 	/**
 	 * This test method will call the testBrowseVerification().It will execute
@@ -191,16 +198,17 @@ public class MainActivityTest extends
 	 * 
 	 */
 
-	/*
-	  @Smoke public void testXBrowseVerification() throws TestException {
+	
+	 @Smoke 
+	  public void testAudioDevicesVerificationTest() throws TestException {
 	  
-	  try { Log.i(TAG, "testBrowseVerification---------Start"); // creating
+	  try { Log.i(TAG, "testAudioDevicesVerificationTest---------Start"); // creating
 	  // of the class 
-	  browseTestCase = new CategoryListVerificationTest(soloMain); // calling the test method
+	  audiotest = new AudioDevicesVerificationTest(soloMain); // calling the test method
 	 // withBrowseTestCase object 
-	  browseTestCase.testBrowseVerification(getInstrumentation());
+	  audiotest.testAudioDevicesVerificationTest(getInstrumentation());
 	 
-	  Log.i(TAG, "testBrowseVerification---------End");
+	  Log.i(TAG, "testAudioDevicesVerificationTest---------End");
 	  
 	  }catch (TestException e) { 
 		  Log.e(TAG,Log.getStackTraceString(e));
@@ -208,15 +216,84 @@ public class MainActivityTest extends
 	  }
 	  
 	  }
-	 */
+	 @Smoke 
+	  public void testCamerasVerificationTest() throws TestException {
+	  
+	  try { Log.i(TAG, "testCamerasVerificationTest---------Start"); // creating
+	  // of the class 
+	  camaras = new CamerasVerificationTest(soloMain); // calling the test method
+	 // withBrowseTestCase object 
+	  camaras.testCamerasVerificationTest(getInstrumentation());
+	 
+	  Log.i(TAG, "testCamerasVerificationTest---------End");
+	  
+	  }catch (TestException e) { 
+		  Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }
+	 
+	 @Smoke 
+	  public void testTabletsVerificationTest() throws TestException {
+	  
+	  try { Log.i(TAG, "testCamerasVerificationTest---------Start"); // creating
+	  // of the class 
+	  tablet = new TabletsVerificationTest(soloMain); // calling the test method
+	 // withBrowseTestCase object 
+	  tablet.testTabletsVerificationTest(getInstrumentation());
+	 
+	  Log.i(TAG, "testTabletsVerificationTest---------End");
+	  
+	  }catch (TestException e) { 
+		  Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }
+	 
+	 @Smoke 
+	  public void testMoviesandMusicVerificationTest() throws TestException {
+	  
+	  try { Log.i(TAG, "testCamerasVerificationTest---------Start"); // creating
+	  // of the class 
+	  movie = new MoviesandMusicVerificationTest(soloMain); // calling the test method
+	 // withBrowseTestCase object 
+	  movie.testMoviesandMusicVerificationTest(getInstrumentation());
+	 
+	  Log.i(TAG, "testMoviesandMusicVerificationTest---------End");
+	  
+	  }catch (TestException e) { 
+		  Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }
+	  @Smoke 
+	  public void testComputersProducts() throws TestException {
+	  
+	  try { Log.i(TAG, "testComputersProducts---------Start"); // creating
+	  // of the class 
+	  computer = new ComputorsProductTest(soloMain); // calling the test method
+	 // withcomputer object 
+	  computer.testComputorsProducts(getInstrumentation());
+	 
+	  Log.i(TAG, "testComputorsProducts---------End");
+	  
+	  }catch (TestException e) { 
+		  Log.e(TAG,Log.getStackTraceString(e));
+	  
+	  }
+	  
+	  }
 
 	/**
 	 * This test method will call the testBrowseValidation() .It will check the
 	 * Browse Validation scenario.
 	 */
 
-	/*
-	  @Smoke public void testBrowseValidation() throws TestException {
+	
+	/*  @Smoke public void testBrowseValidation() throws TestException {
 	  
 	  try { Log.i(TAG, "testBrowseValidation---------Start"); 
 	  // creating object of the classBrowseValidationTestCase 
@@ -258,7 +335,7 @@ public class MainActivityTest extends
 	 * scenario LongPause
 	 */
 
-	/*
+	
 	  public void testWLongPause() throws TestException {
 	 
 	  try { Log.i(TAG, "testSpecialOffers---------Start"); 
@@ -270,7 +347,7 @@ public class MainActivityTest extends
 	  
 	  }
 	  
-	  }*/
+	  }
 	 
 
 	/**
