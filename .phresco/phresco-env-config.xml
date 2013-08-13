@@ -1,3 +1,0 @@
-<environments>
-    <environment default="true" desc="Production Environment is used for Development purpose only" name="Production"/>
-</environments>
