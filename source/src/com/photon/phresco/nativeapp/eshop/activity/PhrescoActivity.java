@@ -69,9 +69,7 @@ public class PhrescoActivity extends Activity {
 	private int screenHeight;
 	private int screenWidth;
 	
-	private static final String WEBSERVICE_CONFIG_NAME = "Native_Eshop";
-//	private static final String SERVER_CONFIG_NAME = "Native_Server";
-//	private static final String SERVER = "Server";
+
 	private static final String WEB_SERVICE = "WebService";
 
 	private String protocol = "protocol";
@@ -206,8 +204,9 @@ public class PhrescoActivity extends Activity {
 				PhrescoLogger.info(TAG + "envName = " + envName	+ " ----- envType = " + envType);
 				//properties = configuration.getProperties();
 
-				if (envType.equalsIgnoreCase("webservice")) {
-					String configJsonString = confReaderObj.getConfigAsJSON(envName, WEB_SERVICE, WEBSERVICE_CONFIG_NAME);
+				 if(envType.equalsIgnoreCase("webservice")) {
+				    String configName = configuration.getName();
+				    String configJsonString = confReaderObj.getConfigAsJSON(envName, WEB_SERVICE, configName);
 					getWebServiceURL(configJsonString);
 				} else if (envType.equalsIgnoreCase("server")) {					
 					/*String configJsonString = confReaderObj.getConfigAsJSON(envName, SERVER, SERVER_CONFIG_NAME);
@@ -323,15 +322,7 @@ public class PhrescoActivity extends Activity {
 	
 	
 
-	// Below code is used for reading web service URL from Phresco configuration
-	// menu
-	// We are no more using EnvConstructor class any where
-	/*public void buildEnvData() {
-		Constants.setRestAPI(Constants.REST_API);
-		EnvConstuctor envConstuctor = new EnvConstuctor(getResources());
-		Constants.setWebContextURL(envConstuctor
-				.getWebServiceURL(WEBSERVICE_CONFIG_NAME));
-	}*/
+	
 
 	/**
 	 * Make a standard toast that just contains a text view with the text from a
