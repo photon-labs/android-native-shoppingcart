@@ -1,0 +1,12 @@
+<environments>
+    <environment default="true" desc="Production Environment is used for Development purpose only" name="Production">
+        <WebService desc="Webservice Configuration for Android Native Eshop application" name="Native_Eshop">
+            <port>6060</port>
+            <password/>
+            <context>webservice</context>
+            <host>localhost</host>
+            <protocol>http</protocol>
+            <username/>
+        </WebService>
+    </environment>
+</environments>
