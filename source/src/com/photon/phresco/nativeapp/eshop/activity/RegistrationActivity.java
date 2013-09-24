@@ -195,10 +195,9 @@ public class RegistrationActivity extends PhrescoActivity {
 
 	/**
 	 * Post the registration details to server for authentication
-	 *
-	 * @throws IOException
+	 * @throws Exception 
 	 */
-	protected void postRegistrationDetails() throws IOException {
+	protected void postRegistrationDetails() throws Exception {
 		registerationJSONResponse = customerObj.postCredentialDetails(firstName.getText().toString(),lastName.getText().toString(),emailId.getText().toString(), password.getText().toString());
 
 		if(registerationJSONResponse!=null){

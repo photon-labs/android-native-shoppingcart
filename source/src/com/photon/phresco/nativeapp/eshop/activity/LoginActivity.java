@@ -294,10 +294,9 @@ public class LoginActivity extends PhrescoActivity {
 
 	/**
 	 * Post the login details to server for authentication
-	 *
-	 * @throws IOException
+	 * @throws Exception 
 	 */
-	protected void postLoginDetails() throws IOException {
+	protected void postLoginDetails() throws Exception {
 		Login logObj = new Login();
 		JSONObject loginJSONResponse = customerObj.postCredentialDetails(loginEmailId.getText().toString(), loginPassword.getText().toString());
 

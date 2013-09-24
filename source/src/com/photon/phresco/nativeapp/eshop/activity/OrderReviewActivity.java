@@ -341,8 +341,9 @@ public class OrderReviewActivity extends PhrescoActivity {
 
 	/**
 	 * Create JSON String for order details, and post it to the server
+	 * @throws Exception 
 	 */
-	private void postOrderDetails() throws IOException {
+	private void postOrderDetails() throws Exception {
 		Gson jsonObj = new Gson();
 		// convert the orderInfo object to JSON String
 

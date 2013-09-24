@@ -125,9 +125,9 @@ public class Order implements Serializable {
 	 * @param 	sURL
 	 * @param 	strJSON
 	 * @return	JSONObject
-	 * @throws 	IOException
+	 * @throws Exception 
 	 */
-	public JSONObject postOrderJSONObject(String sURL, String strJSON) throws IOException {
+	public JSONObject postOrderJSONObject(String sURL, String strJSON) throws Exception {
 		PhrescoLogger.info(TAG + " - postOrderJSONObject() :  ");
 		JSONObject submitOrderJSONResponse = null;
 		submitOrderJSONResponse = JSONHelper.postJSONObjectToURL(sURL, strJSON);

@@ -100,8 +100,9 @@ public class Customer implements Serializable, IPhrescoValidator {
 	 * Post the login details to server for authentication
 	 * @param firstName
 	 * @param lastName
+	 * @throws Exception 
 	 */
-	public JSONObject postCredentialDetails(String emailId, String password) throws IOException {
+	public JSONObject postCredentialDetails(String emailId, String password) throws Exception {
 		JSONObject responseJSON = null;
 
 		// Post the login JSON to server, and receive the JSON response
@@ -129,8 +130,9 @@ public class Customer implements Serializable, IPhrescoValidator {
 	 * @param  lastName
 	 * @param  emailId
 	 * @param  password
+	 * @throws Exception 
 	 */
-	public JSONObject postCredentialDetails(String firstName,String lastName,String emailId, String password) throws IOException {
+	public JSONObject postCredentialDetails(String firstName,String lastName,String emailId, String password) throws Exception {
 		JSONObject responseJSON = null;
 
 		// Post the register JSON to server, and receive the JSON response

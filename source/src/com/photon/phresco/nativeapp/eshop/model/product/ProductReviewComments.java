@@ -124,8 +124,9 @@ public class ProductReviewComments implements Serializable {
 	 * Post the Product Review comment  JSON object
 	 *
 	 * @param productReviewCommentObj
+	 * @throws Exception 
 	 */
-	public JSONObject postCredentialDetails(int productId, int userId, float rating, String userComment, String commentDate, String operation) throws IOException{
+	public JSONObject postCredentialDetails(int productId, int userId, float rating, String userComment, String commentDate, String operation) throws Exception{
 		JSONObject responseJSON = null;
 
 		// Post the comment to JSON to server, and receive the JSON response

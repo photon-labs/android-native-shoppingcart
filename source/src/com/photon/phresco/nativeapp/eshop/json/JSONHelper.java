@@ -115,7 +115,7 @@ public class JSONHelper {
 	 * @throws Exception
 	 */
 	public static JSONObject postJSONObjectToURL(String url, String jsonParam)
-			throws IOException {
+			throws Exception {
 		InputStream is = null;
 		String result = null;
 		JSONObject jObject = null;
