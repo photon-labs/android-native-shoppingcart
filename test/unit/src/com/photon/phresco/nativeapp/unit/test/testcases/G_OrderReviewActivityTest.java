@@ -81,7 +81,7 @@ public class G_OrderReviewActivityTest extends TestCase {
 	 * get the order details and post it to web server
 	 */
 	@Test
-	public void testOrderDetails() {
+	public void testOrderDetails() throws Exception{
 
 		// convert the orderInfo object to JSON String
 
@@ -140,7 +140,7 @@ public class G_OrderReviewActivityTest extends TestCase {
 	 * get the order details and post it to web server
 	 */
 	@Test
-	public void testOrderDetailsValidation() {
+	public void testOrderDetailsValidation() throws Exception {
 
 		// convert the orderInfo object to JSON String
 

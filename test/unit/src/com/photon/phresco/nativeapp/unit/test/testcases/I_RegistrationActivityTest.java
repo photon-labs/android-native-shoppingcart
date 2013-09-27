@@ -76,7 +76,7 @@ public class I_RegistrationActivityTest extends TestCase{
 	 *
 	 */
 	@Test
-	public final void testRegistraion() {
+	public final void testRegistraion() throws Exception {
 		JSONObject jObjMain = new JSONObject();
 		JSONObject jObj = new JSONObject();
 

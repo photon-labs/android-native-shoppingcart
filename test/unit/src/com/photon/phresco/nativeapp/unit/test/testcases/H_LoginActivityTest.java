@@ -76,7 +76,7 @@ public class H_LoginActivityTest extends TestCase{
 	 *
 	 */
 	@Test
-	public final void testLogin() {
+	public final void testLogin() throws Exception {
 
 		JSONObject jObjMain = new JSONObject();
 		JSONObject jObj = new JSONObject();
@@ -109,7 +109,7 @@ public class H_LoginActivityTest extends TestCase{
 	 *
 	 */
 	@Test
-	public final void testLoginCredantial() {
+	public final void testLoginCredantial() throws Exception{
 
 		JSONObject jObjMain = new JSONObject();
 		JSONObject jObj = new JSONObject();
