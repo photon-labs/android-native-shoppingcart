@@ -51,6 +51,40 @@
       </plugin>
     </plugins>
   </build>
+   <profiles>
+      <profile>
+       <id>coverage</id>
+       <build>
+        <plugins>
+          <plugin>
+            <groupId>com.photon.maven.plugins.android.generation2</groupId>
+            <artifactId>android-maven-plugin</artifactId>
+            <configuration>
+		    <test>
+                <coverage>true</coverage>
+                <createReport>true</createReport>
+				<coverageFile>/mnt/sdcard/com.photon.phresco.nativeapp/files/coverage.ec</coverageFile>
+            </test>
+            </configuration>
+            <extensions>true</extensions>
+            <executions>
+              <execution>
+                <id>pull-coverage</id>
+                <phase>post-integration-test</phase>
+                <goals>
+                  <goal>pull</goal>
+                </goals>
+                <configuration>
+                  <pullSource>/mnt/sdcard/com.photon.phresco.nativeapp/files/coverage.ec</pullSource>
+                <pullDestination>${project.basedir}/../../do_not_checkin/target/emma/coverage.ec</pullDestination>
+                </configuration>
+              </execution>
+            </executions>
+           </plugin>
+         </plugins>
+       </build>
+     </profile>
+	</profiles>
   <dependencies>
     <dependency>
       <groupId>com.google.android</groupId>
