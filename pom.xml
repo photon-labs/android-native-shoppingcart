@@ -5,7 +5,7 @@
     <artifactId>PHR_AndroidNative</artifactId>
     <packaging>apk</packaging>
     <name>PHR_AndroidNative</name>
-    <version>3.2.1.1000</version>
+    <version>3.2.1.1001-SNAPSHOT</version>
 	<inceptionYear>1999</inceptionYear>
     <organization>
         <name>Photon Infotech Inc.</name>
@@ -25,7 +25,7 @@
                 <plugin>
                     <groupId>com.photon.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
-                    <version>3.2.1.1000</version>
+                    <version>3.2.1.1001-SNAPSHOT</version>
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
