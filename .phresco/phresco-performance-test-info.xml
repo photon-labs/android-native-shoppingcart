@@ -14,7 +14,7 @@
                 <groupId>com.photon.phresco.plugins</groupId>
                 <artifactId>android-phresco-plugin</artifactId>
                 <type>jar</type>
-                <version>3.3.1.4001-SNAPSHOT</version>
+                <version>3.3.1.4002-SNAPSHOT</version>
                 <class>com.photon.phresco.plugins.android.AndroidPlugin</class>
             </dependency>
         </implementation>
@@ -36,7 +36,7 @@
 <groupId>com.photon.phresco.commons</groupId>
 <artifactId>phresco-commons</artifactId>
 <type>jar</type>
-<version>3.3.1.4001-SNAPSHOT</version>
+<version>3.3.1.4002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
