@@ -4,8 +4,8 @@
     <groupId>com.photon.phresco.functional</groupId>
     <artifactId>android-native-shoppingcart-func</artifactId>
     <packaging>apk</packaging>
-    <name>PHR_Android_native_eshop</name>
-    <version>1.0.0</version>
+    <name>Android_native_eshop</name>
+    <version>3.3.1.16001-SNAPSHOT</version>
     <build>
         <sourceDirectory>src</sourceDirectory>
 		<outputDirectory>do_not_checkin/target/android-classes</outputDirectory>
